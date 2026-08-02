@@ -1,5 +1,5 @@
 /* IronMinute offline cache */
-const C = "ironminute-v1";
+const C = "ironminute-v2";
 const FILES = ["./", "./index.html", "./manifest.webmanifest"];
 self.addEventListener("install", e => {
   self.skipWaiting();
