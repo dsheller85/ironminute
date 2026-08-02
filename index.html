@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="IronMinute">
+<meta name="theme-color" content="#0b0d10">
+<title>IronMinute</title>
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" href="data:image/png;base64,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">
+<link rel="manifest" href="manifest.webmanifest">
+<script>
+/* Offline support. Silently does nothing for the single-file version. */
+if ("serviceWorker" in navigator && location.protocol.indexOf("http") === 0) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker.register("sw.js").catch(function () { });
+  });
+}
+</script>
+<style>
+:root{
+  --bg:#0b0d10; --surface:#14171c; --surface2:#1c2027; --surface3:#252a33;
+  --line:#2b313b; --txt:#eceef1; --mut:#8f97a3; --dim:#636b78;
+  --acc:#ff6a1f; --acc2:#ffa04d; --kb:#38bdf8; --bw:#a78bfa;
+  --ok:#34d399; --warn:#fbbf24; --bad:#f87171;
+  --r:14px; --sat:env(safe-area-inset-top); --sab:env(safe-area-inset-bottom);
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0;height:100%;overscroll-behavior:none}
+body{
+  background:var(--bg);color:var(--txt);
+  font:16px/1.45 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  -webkit-user-select:none;user-select:none;
+}
+button,input,select,textarea{font:inherit;color:inherit}
+button{background:none;border:0;padding:0;cursor:pointer}
+.num{font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}
+
+/* ---- layout ---- */
+#app{display:flex;flex-direction:column;height:100%;height:100dvh;max-width:640px;margin:0 auto;position:relative}
+header{
+  padding:calc(var(--sat) + 12px) 16px 10px;display:flex;align-items:center;gap:10px;
+  background:linear-gradient(180deg,rgba(11,13,16,.98),rgba(11,13,16,.86));
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line);
+}
+.logo{display:flex;align-items:center;gap:9px;font-weight:800;letter-spacing:.14em;font-size:14px}
+.logo b{color:var(--acc)}
+.logo .dot{width:9px;height:9px;border-radius:50%;background:var(--acc);box-shadow:0 0 12px var(--acc)}
+.spacer{flex:1}
+.iconbtn{width:36px;height:36px;border-radius:11px;background:var(--surface2);display:grid;place-items:center;font-size:17px;border:1px solid var(--line)}
+main{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:14px 14px 96px}
+.view{display:none;animation:fade .22s ease}
+.view.on{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+nav{
+  position:fixed;bottom:0;left:0;right:0;z-index:30;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:2px;
+  padding:8px 8px calc(var(--sab) + 8px);
+  background:rgba(14,17,21,.93);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  border-top:1px solid var(--line);max-width:640px;margin:0 auto;
+}
+nav button{display:flex;flex-direction:column;align-items:center;gap:3px;padding:6px 0;border-radius:12px;color:var(--dim);font-size:10px;font-weight:600;letter-spacing:.06em}
+nav button svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+nav button.on{color:var(--acc)}
+
+/* ---- pieces ---- */
+h2.sec{font-size:12px;letter-spacing:.16em;color:var(--dim);font-weight:700;margin:22px 2px 10px;text-transform:uppercase}
+h2.sec:first-child{margin-top:4px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px;margin-bottom:10px}
+.card.tap:active{background:var(--surface2);transform:scale(.99)}
+.card.tap{transition:transform .1s}
+.row{display:flex;align-items:center;gap:12px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.ttl{font-weight:700;font-size:16px}
+.sub{color:var(--mut);font-size:13px;margin-top:3px}
+.tiny{color:var(--dim);font-size:11.5px;letter-spacing:.05em}
+.badge{font-size:10px;font-weight:800;letter-spacing:.1em;padding:3px 7px;border-radius:6px;background:var(--surface3);color:var(--mut);text-transform:uppercase;white-space:nowrap}
+.badge.kb{background:rgba(56,189,248,.15);color:var(--kb)}
+.badge.bw{background:rgba(167,139,250,.15);color:var(--bw)}
+.badge.acc{background:rgba(255,106,31,.16);color:var(--acc2)}
+.badge.mix{background:rgba(52,211,153,.15);color:var(--ok)}
+.dots{display:flex;gap:3px;align-items:center}
+.dots i{width:5px;height:5px;border-radius:50%;background:var(--surface3)}
+.dots i.f{background:var(--acc)}
+
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:14px;border-radius:13px;background:var(--surface2);border:1px solid var(--line);font-weight:700;font-size:15px;width:100%}
+.btn:active{transform:scale(.98)}
+.btn.pri{background:linear-gradient(180deg,var(--acc),#e2520f);border-color:#ff804a;color:#fff;box-shadow:0 6px 20px rgba(255,106,31,.28)}
+.btn.gho{background:transparent}
+.btn.sm{padding:10px 12px;font-size:13.5px;border-radius:11px}
+.btn.bad{color:var(--bad);border-color:rgba(248,113,113,.35)}
+
+.chips{display:flex;gap:7px;overflow-x:auto;padding:2px 0 8px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{white-space:nowrap;padding:8px 13px;border-radius:999px;background:var(--surface2);border:1px solid var(--line);font-size:13px;font-weight:600;color:var(--mut)}
+.chip.on{background:var(--acc);border-color:var(--acc);color:#fff}
+.chip.on.kbc{background:var(--kb);border-color:var(--kb);color:#04212f}
+.chip.on.bwc{background:var(--bw);border-color:var(--bw);color:#1b1035}
+
+input[type=text],input[type=number],input[type=search],select,textarea{
+  width:100%;background:var(--surface2);border:1px solid var(--line);border-radius:11px;padding:12px;font-size:16px;-webkit-appearance:none;appearance:none;
+}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--acc)}
+select{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8'><path d='M1 1l5 5 5-5' stroke='%238f97a3' stroke-width='2' fill='none' stroke-linecap='round'/></svg>");background-repeat:no-repeat;background-position:right 13px center;padding-right:34px}
+label.fld{display:block;margin-bottom:12px}
+label.fld span{display:block;font-size:11.5px;letter-spacing:.1em;color:var(--dim);font-weight:700;text-transform:uppercase;margin-bottom:6px}
+
+.sw{display:flex;align-items:center;justify-content:space-between;padding:13px 0;border-bottom:1px solid var(--line)}
+.sw:last-child{border-bottom:0}
+.tog{width:50px;height:30px;border-radius:999px;background:var(--surface3);position:relative;transition:background .18s;flex:none}
+.tog::after{content:"";position:absolute;top:3px;left:3px;width:24px;height:24px;border-radius:50%;background:#fff;transition:transform .18s}
+.tog.on{background:var(--acc)}
+.tog.on::after{transform:translateX(20px)}
+
+/* ---- exercise list ---- */
+.ex{display:flex;align-items:center;gap:11px;padding:12px 13px;background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:7px}
+.ex:active{background:var(--surface2)}
+.ex .mark{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;font-size:11px;font-weight:900;letter-spacing:.02em;flex:none}
+.ex .mark.kb{background:rgba(56,189,248,.14);color:var(--kb)}
+.ex .mark.bw{background:rgba(167,139,250,.14);color:var(--bw)}
+.ex .meta{flex:1;min-width:0}
+.ex .nm{font-weight:650;font-size:14.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ex .gp{font-size:11.5px;color:var(--dim);margin-top:2px}
+
+/* ---- sheet ---- */
+#scrim{position:fixed;inset:0;background:rgba(0,0,0,.65);backdrop-filter:blur(3px);z-index:70;opacity:0;pointer-events:none;transition:opacity .22s}
+#scrim.on{opacity:1;pointer-events:auto}
+#sheet{
+  position:fixed;left:0;right:0;bottom:0;z-index:71;max-width:640px;margin:0 auto;
+  background:var(--surface);border-radius:22px 22px 0 0;border-top:1px solid var(--line);
+  transform:translateY(102%);transition:transform .28s cubic-bezier(.32,.72,0,1);
+  max-height:92%;display:flex;flex-direction:column;
+}
+#sheet.on{transform:none}
+.shead{padding:14px 16px 10px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--line);flex:none}
+.shead .grab{position:absolute;top:7px;left:50%;transform:translateX(-50%);width:38px;height:4px;border-radius:2px;background:var(--surface3)}
+.shead .st{font-weight:800;font-size:17px;flex:1}
+.sbody{padding:16px 16px calc(var(--sab) + 22px);overflow-y:auto;-webkit-overflow-scrolling:touch}
+
+/* ---- runner ---- */
+#runner{position:fixed;inset:0;z-index:60;background:var(--bg);display:none;flex-direction:column;padding:calc(var(--sat) + 10px) 16px calc(var(--sab) + 14px)}
+#runner.on{display:flex}
+#runner.work{background:#0d1a12}
+#runner.rest{background:#1a1410}
+#runner.prep{background:#101520}
+#runner.flash{background:var(--acc)}
+.rtop{display:flex;align-items:center;gap:10px;flex:none}
+.rttl{font-weight:800;font-size:15px;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rmid{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:0}
+.phase{font-size:13px;letter-spacing:.28em;font-weight:800;color:var(--acc2);text-transform:uppercase}
+.clock{font-size:clamp(64px,23vw,130px);font-weight:800;line-height:.95;letter-spacing:-.03em;margin:6px 0}
+.clock.sm{font-size:clamp(40px,14vw,76px)}
+.sublbl{color:var(--mut);font-size:14px}
+.ring{position:relative;width:min(74vw,300px);aspect-ratio:1;display:grid;place-items:center;margin:2px 0}
+.ring svg{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:7;stroke-linecap:round}
+.ring .bgc{stroke:rgba(255,255,255,.07)}
+.ring .fgc{stroke:var(--acc);transition:stroke-dashoffset .18s linear}
+.ring .inner{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 14px}
+.movelist{width:100%;max-height:26vh;overflow-y:auto;margin-top:6px}
+.mv{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:11px;background:var(--surface);margin-bottom:6px;border:1px solid transparent}
+.mv.cur{border-color:var(--acc);background:rgba(255,106,31,.1)}
+.mv .r{font-weight:800;color:var(--acc2);font-size:14px;min-width:44px;text-align:right}
+.mv .n{flex:1;text-align:left;font-size:14px}
+.rbot{flex:none;display:grid;gap:9px}
+.bigbtn{padding:20px;border-radius:16px;font-size:17px;font-weight:800;letter-spacing:.04em}
+.counter{font-size:56px;font-weight:800;line-height:1}
+
+.empty{text-align:center;padding:44px 20px;color:var(--dim)}
+.empty .big{font-size:38px;margin-bottom:10px;opacity:.5}
+.hr{height:1px;background:var(--line);margin:14px 0}
+.pill{display:inline-flex;align-items:center;gap:5px;padding:5px 10px;border-radius:999px;background:var(--surface2);font-size:12px;color:var(--mut);margin:0 6px 6px 0;border:1px solid var(--line)}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px;text-align:center}
+.stat .v{font-size:22px;font-weight:800}
+.stat .k{font-size:10px;letter-spacing:.1em;color:var(--dim);text-transform:uppercase;margin-top:2px}
+.toast{position:fixed;left:50%;bottom:calc(var(--sab) + 90px);transform:translateX(-50%) translateY(20px);background:var(--surface3);border:1px solid var(--line);padding:11px 18px;border-radius:12px;z-index:90;opacity:0;transition:.25s;font-size:14px;font-weight:600;pointer-events:none;max-width:88%;text-align:center}
+.toast.on{opacity:1;transform:translateX(-50%)}
+.dragging{opacity:.4}
+.stepper{display:flex;align-items:center;gap:0;background:var(--surface2);border:1px solid var(--line);border-radius:11px;overflow:hidden}
+.stepper button{width:44px;height:44px;font-size:20px;font-weight:700;color:var(--mut)}
+.stepper button:active{background:var(--surface3)}
+.stepper .val{flex:1;text-align:center;font-weight:800;font-size:16px}
+</style>
+</head>
+<body>
+<div id="app">
+  <header>
+    <div class="logo"><span class="dot"></span>IRON<b>MINUTE</b></div>
+    <div class="spacer"></div>
+    <button class="iconbtn" id="btnSettings" aria-label="Settings">⚙</button>
+  </header>
+
+  <main id="main">
+    <!-- ================= TRAIN ================= -->
+    <section class="view on" id="v-train">
+      <h2 class="sec">Quick Start</h2>
+      <div class="grid2" id="quickStart"></div>
+
+      <h2 class="sec">Generate</h2>
+      <div class="card tap" id="btnGen">
+        <div class="row">
+          <div style="font-size:26px">🎲</div>
+          <div style="flex:1">
+            <div class="ttl">Random Workout</div>
+            <div class="sub">Pick your time, gear and focus — get a workout built from the library.</div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="sec">My Workouts</h2>
+      <div id="myWorkouts"></div>
+      <button class="btn gho" id="btnBuild">＋ Build a workout</button>
+
+      <h2 class="sec">Preset Workouts</h2>
+      <div class="chips" id="presetChips"></div>
+      <div id="presetList"></div>
+    </section>
+
+    <!-- ================= LIBRARY ================= -->
+    <section class="view" id="v-lib">
+      <input type="search" id="libSearch" placeholder="Search 236 movements…" autocomplete="off" autocorrect="off" spellcheck="false">
+      <div class="chips" style="margin-top:10px" id="libEq"></div>
+      <div class="chips" id="libGroup"></div>
+      <div class="tiny" id="libCount" style="margin:2px 2px 10px"></div>
+      <div id="libList"></div>
+    </section>
+
+    <!-- ================= TIMER ================= -->
+    <section class="view" id="v-timer">
+      <div class="chips" id="tmMode"></div>
+      <div id="tmConfig"></div>
+      <div class="hr"></div>
+      <div id="tmMoves"></div>
+      <button class="btn gho sm" id="tmAdd" style="margin-bottom:14px">＋ Add movement (optional)</button>
+      <button class="btn pri" id="tmStart">START</button>
+      <button class="btn gho sm" id="tmSave" style="margin-top:9px">Save as workout</button>
+    </section>
+
+    <!-- ================= LOG ================= -->
+    <section class="view" id="v-log">
+      <div class="grid4" id="logStats" style="margin-bottom:6px"></div>
+      <h2 class="sec">Personal Records</h2>
+      <div id="prList"></div>
+      <h2 class="sec">History</h2>
+      <div id="histList"></div>
+    </section>
+  </main>
+
+  <nav id="nav">
+    <button data-v="train" class="on"><svg viewBox="0 0 24 24"><path d="M6.5 6.5v11M17.5 6.5v11M3 9v6M21 9v6M6.5 12h11"/></svg>TRAIN</button>
+    <button data-v="lib"><svg viewBox="0 0 24 24"><path d="M4 5.5A1.5 1.5 0 015.5 4H9v16H5.5A1.5 1.5 0 014 18.5zM9 4h5.5A1.5 1.5 0 0116 5.5v13a1.5 1.5 0 01-1.5 1.5H9M18 6l2.5 12.5"/></svg>LIBRARY</button>
+    <button data-v="timer"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/></svg>TIMER</button>
+    <button data-v="log"><svg viewBox="0 0 24 24"><path d="M4 19V6M4 19h16M8 16V9M12 16v-4M16 16V7M20 16v-3"/></svg>LOG</button>
+  </nav>
+</div>
+
+<div id="scrim"></div>
+<div id="sheet">
+  <div class="shead"><div class="grab"></div><div class="st" id="sheetTitle"></div><button class="iconbtn" id="sheetClose">✕</button></div>
+  <div class="sbody" id="sheetBody"></div>
+</div>
+
+<div id="runner">
+  <div class="rtop">
+    <button class="iconbtn" id="rQuit">✕</button>
+    <div class="rttl" id="rTitle"></div>
+    <button class="iconbtn" id="rSound">🔊</button>
+  </div>
+  <div class="rmid" id="rMid"></div>
+  <div class="rbot" id="rBot"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+
+/* ===== EXERCISE LIBRARY =====
+   [ name, equip(bw|kb), group, level(1-3), tags, cues ]
+   tags: push pull legs hinge core cardio skill mobility carry uni jump
+         gear:bar gear:box gear:bench gear:wall gear:rope
+*/
+const RAW = [
+/* ---------- BODYWEIGHT : PUSH ---------- */
+["Push-Up","bw","Push",1,"push","Hands under shoulders, ribs down, glutes tight. Lower until the chest is a fist off the floor, elbows about 45° from the torso."],
+["Knee Push-Up","bw","Push",1,"push","Knees down, but keep a straight line from knees to head. Same elbow path as a full push-up."],
+["Incline Push-Up","bw","Push",1,"push gear:bench","Hands on a bench, box, or counter. The higher the hands, the easier it gets — the best way to earn a full push-up."],
+["Decline Push-Up","bw","Push",2,"push gear:bench","Feet elevated on a bench or box. Shifts load onto the upper chest and shoulders."],
+["Diamond Push-Up","bw","Push",2,"push","Index fingers and thumbs touching under the sternum. Elbows track back, not out. Heavy triceps."],
+["Wide Push-Up","bw","Push",1,"push","Hands ~1.5x shoulder width. More chest, less triceps. Don't let the shoulders shrug up."],
+["Archer Push-Up","bw","Push",3,"push uni","Wide hands. Bend one arm and lower toward that hand while the other arm stays straight. A one-arm push-up stepping stone."],
+["Hindu Push-Up","bw","Push",2,"push mobility","Start in downward dog, dive the chest through low, finish in an upward dog. Great for shoulder mobility."],
+["Pike Push-Up","bw","Push",2,"push","Hips high, body in an upside-down V. Lower the crown of the head toward the floor. Builds vertical pressing strength."],
+["Elevated Pike Push-Up","bw","Push",3,"push gear:bench","Feet on a box with hips stacked over the shoulders. The closest you get to a handstand push-up without a wall."],
+["Wall Handstand Push-Up","bw","Push",3,"push skill gear:wall","Kick up to the wall, lower until the head lightly taps, press out. Keep the ribs down and don't arch."],
+["One-Arm Push-Up","bw","Push",3,"push uni","Feet wide, free hand behind the back. Resist the urge to twist — keep the hips square to the floor."],
+["Clapping Push-Up","bw","Push",3,"push jump","Explode off the floor hard enough to clap, land with soft elbows. Quality over quantity."],
+["Spiderman Push-Up","bw","Push",2,"push core","As you lower, drive one knee to the same-side elbow. Alternate sides each rep."],
+["Bench Dip","bw","Push",1,"push gear:bench","Hands on a bench behind you, legs out front. Lower until the upper arms are parallel, then press up."],
+["Parallel Bar Dip","bw","Push",2,"push gear:bar","Slight forward lean, shoulders down and back. Lower until the shoulder is level with the elbow."],
+["Ring / Bar Dip Hold","bw","Push",2,"push skill gear:bar","Support at the top with locked elbows and depressed shoulders. Hold for time."],
+["Wall Handstand Hold","bw","Push",2,"skill gear:wall","Chest or back to the wall, arms locked, ribs down. Build up to 60 seconds."],
+["Pseudo Planche Push-Up","bw","Push",3,"push","Hands at hip level with fingers turned out, lean the shoulders past the hands. Brutal on the anterior delts."],
+["Sphinx Push-Up","bw","Push",2,"push","From a forearm plank, press up onto the hands by extending only at the elbow. Isolated triceps work."],
+["Hand-Release Push-Up","bw","Push",1,"push","Chest to the floor, lift both hands off, replace and press. Kills all bounce and momentum."],
+["Wall Walk","bw","Push",3,"push skill core gear:wall","Start in a plank with feet on the wall, walk the hands in and the feet up until your chest is near the wall, then reverse."],
+
+/* ---------- BODYWEIGHT : PULL ---------- */
+["Pull-Up","bw","Pull",2,"pull gear:bar","Overhand grip, start from a dead hang. Pull the chest to the bar, chin clearly over. Control the way down."],
+["Chin-Up","bw","Pull",2,"pull gear:bar","Underhand grip, shoulder width. More biceps than a pull-up and usually a few reps easier."],
+["Neutral-Grip Pull-Up","bw","Pull",2,"pull gear:bar","Palms facing each other. Easiest on the shoulders and elbows of the three grips."],
+["Chest-to-Bar Pull-Up","bw","Pull",3,"pull gear:bar","Pull until the chest actually contacts the bar. Lean back slightly and drive the elbows down and behind."],
+["Kipping Pull-Up","bw","Pull",3,"pull skill gear:bar","Arch-to-hollow swing, then punch the hips and pull. Only worth learning after 5+ strict pull-ups."],
+["Jumping Pull-Up","bw","Pull",1,"pull gear:bar","Bar at about wrist height overhead. Jump to get the chin over, then lower under control."],
+["Negative Pull-Up","bw","Pull",1,"pull gear:bar","Jump or step to the top, then take 5 full seconds to lower. The fastest route to a first pull-up."],
+["Banded Pull-Up","bw","Pull",1,"pull gear:bar","Loop a band over the bar and stand or kneel in it. Thicker band = more help out of the bottom."],
+["Inverted Row","bw","Pull",1,"pull gear:bar","Bar at hip height, body straight, heels on the floor. Pull the chest to the bar and squeeze the shoulder blades."],
+["Table Row","bw","Pull",1,"pull","No bar? Lie under a sturdy table, grip the edge, and row your chest to it."],
+["Towel Row","bw","Pull",2,"pull","Loop a towel around a post, lean back and row. Adjust the angle to change the difficulty."],
+["Scapular Pull-Up","bw","Pull",1,"pull gear:bar","Hang with straight arms, then pull the shoulder blades down and back without bending the elbows. Small range, huge payoff."],
+["Dead Hang","bw","Pull",1,"pull gear:bar","Just hang, shoulders active. Builds grip and decompresses the spine. Accumulate 2 minutes."],
+["Archer Pull-Up","bw","Pull",3,"pull uni gear:bar","Wide grip. Pull toward one hand while the opposite arm stays nearly straight."],
+["Commando Pull-Up","bw","Pull",3,"pull gear:bar","Straddle the bar with a mixed grip, pull the head alongside it — alternating sides."],
+["Bar Muscle-Up","bw","Pull",3,"pull push skill gear:bar","Big kip, pull the bar to the hips, then a fast transition into the dip. Advanced skill work."],
+["L-Sit Pull-Up","bw","Pull",3,"pull core gear:bar","Legs held out at 90° the whole rep. Ruthless on the abs and lats together."],
+["Chin-Up Hold","bw","Pull",2,"pull gear:bar","Hold at the top with the chin over the bar. Great isometric when you can't add reps yet."],
+["Superman","bw","Pull",1,"hinge core","Face down, lift the chest, arms and legs off the floor. Squeeze the glutes and hold or pulse."],
+
+/* ---------- BODYWEIGHT : LEGS ---------- */
+["Air Squat","bw","Legs",1,"legs","Feet shoulder width, knees track the toes, hips below parallel, chest up. Full standing lockout at the top."],
+["Squat Jump","bw","Legs",2,"legs jump cardio","Squat to parallel then jump as high as possible. Land quietly and absorb into the next rep."],
+["Jumping Lunge","bw","Legs",2,"legs jump uni cardio","Switch legs mid-air from lunge to lunge. Back knee kisses the floor each rep."],
+["Forward Lunge","bw","Legs",1,"legs uni","Step out, drop the back knee to just off the floor, drive back to standing off the front heel."],
+["Reverse Lunge","bw","Legs",1,"legs uni","Step backward instead of forward. Easier on the knees and better for balance."],
+["Walking Lunge","bw","Legs",1,"legs uni","Travel forward one lunge at a time. Count each leg as a rep."],
+["Lateral Lunge","bw","Legs",2,"legs uni mobility","Step wide to the side, sit back into that hip while the other leg stays straight."],
+["Curtsy Lunge","bw","Legs",2,"legs uni","Step one leg back and across behind the other. Hits the glute medius hard."],
+["Bulgarian Split Squat","bw","Legs",2,"legs uni gear:bench","Rear foot on a bench, front shin near vertical. Descend until the back knee is just off the floor."],
+["Pistol Squat","bw","Legs",3,"legs uni","One-leg squat to full depth with the other leg held out front. Needs ankle mobility and a lot of balance."],
+["Assisted Pistol Squat","bw","Legs",2,"legs uni","Hold a doorframe or strap for balance, or squat to a box. Same pattern, less demand."],
+["Cossack Squat","bw","Legs",2,"legs uni mobility","Wide stance, sit into one hip with that foot flat and the other leg straight with the toe up."],
+["Shrimp Squat","bw","Legs",3,"legs uni","Hold one ankle behind you, squat down until that knee touches the floor, stand back up."],
+["Wall Sit","bw","Legs",1,"legs gear:wall","Back flat on the wall, thighs parallel to the floor. Hold for time and breathe."],
+["Step-Up","bw","Legs",1,"legs uni gear:box","Full foot on the box, drive through the heel, stand all the way up. Step down under control."],
+["Box Jump","bw","Legs",2,"legs jump cardio gear:box","Swing the arms, jump, land in a quarter squat with the whole foot on the box. Stand up to finish the rep."],
+["Box Jump Over","bw","Legs",2,"legs jump cardio gear:box","Jump on and off the other side, or jump straight over. Keep a rhythm going."],
+["Broad Jump","bw","Legs",2,"legs jump","Jump forward for max distance, land soft and balanced. Reset every rep."],
+["Calf Raise","bw","Legs",1,"legs","Rise onto the toes, pause at the top, lower slowly. Do it off a step for a bigger stretch."],
+["Single-Leg Calf Raise","bw","Legs",2,"legs uni","One foot, full range. Hold something for balance so you can focus on the calf."],
+["Tuck Jump","bw","Legs",2,"legs jump cardio","Jump and pull both knees toward the chest. Land soft, minimal ground contact time."],
+["Skater Jump","bw","Legs",2,"legs jump uni cardio","Bound side to side, landing on one leg and holding a beat before the next bound."],
+["Squat Hold","bw","Legs",1,"legs mobility","Sit in the bottom of a squat, chest tall, elbows pushing the knees out. Hold for time."],
+["Duck Walk","bw","Legs",2,"legs mobility","Walk forward while staying in a deep squat. Quads and hips will complain."],
+["Sissy Squat","bw","Legs",3,"legs","Rise onto the toes and lean back, bending only at the knee. Brutal quad isolation — go slow."],
+["Wall Sit Marches","bw","Legs",2,"legs core gear:wall","Hold a wall sit and lift one foot at a time a few inches off the floor."],
+
+/* ---------- BODYWEIGHT : HINGE / POSTERIOR ---------- */
+["Glute Bridge","bw","Hinge",1,"hinge","Heels close to the glutes, drive the hips up until the body is a straight ramp. Squeeze hard at the top."],
+["Single-Leg Glute Bridge","bw","Hinge",2,"hinge uni","One foot down, other knee pulled in. Keep the hips level as you press up."],
+["Hip Thrust","bw","Hinge",2,"hinge gear:bench","Upper back on a bench, drive the hips to full extension. Chin tucked, ribs down."],
+["Nordic Curl (Eccentric)","bw","Hinge",3,"hinge","Anchor the ankles, lower the torso forward as slowly as you can, catch with the hands. The hardest hamstring move there is."],
+["Bodyweight Good Morning","bw","Hinge",1,"hinge","Hands behind the head, soft knees, push the hips back with a flat back until you feel the hamstrings."],
+["Single-Leg RDL (Bodyweight)","bw","Hinge",2,"hinge uni","Hinge over one leg while the other extends behind you. Hips stay square, back stays flat."],
+["Back Extension","bw","Hinge",1,"hinge gear:bench","Hips supported, lift the torso to a straight line — don't hyperextend past it."],
+["Reverse Hyper","bw","Hinge",2,"hinge gear:bench","Chest on a bench, lift the legs behind you to hip height using the glutes, not the low back."],
+["Bird Dog","bw","Hinge",1,"core hinge","Opposite arm and leg extended, everything else still. Hold a beat at full extension."],
+["Frog Pump","bw","Hinge",1,"hinge","Soles of the feet together, knees out wide, pulse the hips up. Pure glute burn."],
+
+/* ---------- BODYWEIGHT : CORE ---------- */
+["Plank","bw","Core",1,"core","Forearms down, ribs pulled to the hips, glutes and quads tight. It should feel like work from second one."],
+["Side Plank","bw","Core",1,"core uni","Stack the feet and hips, press the bottom shoulder away from the floor. Hold each side."],
+["Hollow Hold","bw","Core",2,"core","Low back pressed flat into the floor, arms and legs extended and hovering. Lower the limbs to make it harder."],
+["Hollow Rock","bw","Core",2,"core","From the hollow position, rock from shoulders to hips without losing the shape."],
+["Arch Hold","bw","Core",1,"core hinge","Face down, everything lifted, squeezing the glutes. The mirror image of the hollow hold."],
+["V-Up","bw","Core",2,"core","Legs and arms meet over the hips in one motion. Keep the legs straight if you can."],
+["Sit-Up","bw","Core",1,"core","Feet anchored or butterflied, sit all the way up and touch the toes or the floor overhead."],
+["AbMat Sit-Up","bw","Core",1,"core","Butterfly the legs, hands touch the floor overhead at the bottom and the toes at the top."],
+["Toes-to-Bar","bw","Core",3,"core pull gear:bar","Hang, kip, and drive both feet up to touch the bar. Control the swing on the way down."],
+["Knees-to-Elbows","bw","Core",2,"core pull gear:bar","Same as toes-to-bar but knees drive to the elbows. A good stepping stone."],
+["Hanging Knee Raise","bw","Core",1,"core pull gear:bar","Dead hang, raise the knees to hip height or above with no swinging."],
+["Hanging Leg Raise","bw","Core",2,"core pull gear:bar","Straight legs from a dead hang to at least parallel. Posteriorly tilt the pelvis at the top."],
+["L-Sit","bw","Core",3,"core skill","Support on the hands or parallettes with the legs straight out at 90°. Start with a tuck hold."],
+["Russian Twist","bw","Core",1,"core","Feet up, lean back to a hollow-ish angle, rotate the shoulders side to side."],
+["Bicycle Crunch","bw","Core",1,"core","Opposite elbow to opposite knee, other leg extended. Slow and deliberate beats fast and sloppy."],
+["Flutter Kick","bw","Core",1,"core","Low back pinned, small fast alternating kicks with straight legs."],
+["Dead Bug","bw","Core",1,"core","Opposite arm and leg lower toward the floor while the low back stays glued down."],
+["Mountain Climber","bw","Core",1,"core cardio","Plank position, drive the knees to the chest fast. Hips stay low and level."],
+["Plank Shoulder Tap","bw","Core",1,"core","In a high plank, tap the opposite shoulder without letting the hips rotate."],
+["Plank Up-Down","bw","Core",2,"core push","Move from forearms to hands and back, one arm at a time. Alternate the lead arm."],
+["Dragon Flag","bw","Core",3,"core gear:bench","Grip behind the head, keep the body rigid and lower from the shoulders only. Elite-level core."],
+["Windshield Wiper","bw","Core",3,"core gear:bar","Hanging or lying, legs together sweeping side to side under control."],
+["Crunch","bw","Core",1,"core","Small range, lift the shoulder blades off the floor and squeeze the abs."],
+["Reverse Crunch","bw","Core",1,"core","Knees to the chest, curl the hips off the floor. Don't use momentum."],
+["Copenhagen Plank","bw","Core",3,"core uni gear:bench","Top foot on a bench, side plank position. Ferocious adductor work."],
+["Side Plank Hip Dip","bw","Core",2,"core uni","From a side plank, lower the hip toward the floor and drive it back up."],
+["Hollow Body Flutter","bw","Core",2,"core","Hold the hollow shape and flutter the legs. Stop the moment the low back lifts."],
+["Bear Hold","bw","Core",1,"core","On hands and toes with the knees hovering an inch off the floor. Flat back, still hips."],
+
+/* ---------- BODYWEIGHT : CONDITIONING ---------- */
+["Burpee","bw","Conditioning",1,"cardio push legs","Chest and thighs to the floor, jump the feet in, stand and jump with the hands overhead."],
+["Burpee Box Jump Over","bw","Conditioning",2,"cardio push legs jump gear:box","Burpee, then jump onto and over the box. A classic engine-wrecker."],
+["No Push-Up Burpee","bw","Conditioning",1,"cardio legs","Down to the floor and back up without the push-up. Keeps the pace high on long sets."],
+["Sprawl","bw","Conditioning",1,"cardio core","Drop the hips to the floor from standing, then pop straight back up. No push-up."],
+["Squat Thrust","bw","Conditioning",1,"cardio legs","Plank to squat and back without the jump or push-up. Great low-impact substitute."],
+["Bear Crawl","bw","Conditioning",1,"cardio core","Knees hovering, opposite hand and foot move together. Keep the hips low."],
+["Crab Walk","bw","Conditioning",1,"cardio core","Face up, hips lifted, travel forward and backward. Shoulders and triceps light up fast."],
+["High Knees","bw","Conditioning",1,"cardio","Run in place driving the knees to hip height. Fast feet, tall posture."],
+["Butt Kicks","bw","Conditioning",1,"cardio","Run in place kicking the heels to the glutes. Good warm-up filler."],
+["Jumping Jack","bw","Conditioning",1,"cardio","Arms and legs out and in together. Simple, unlimited volume."],
+["Star Jump","bw","Conditioning",2,"cardio jump","Squat down then explode into a full X shape in the air."],
+["Inchworm","bw","Conditioning",1,"cardio mobility","Hinge, walk the hands to a plank, walk them back, stand. Add a push-up to make it hurt."],
+["Lateral Hops","bw","Conditioning",1,"cardio jump","Hop side to side over a line or small object. Quick ground contacts."],
+["Line Hops","bw","Conditioning",1,"cardio jump","Fast two-foot hops forward and back over a line for time."],
+["Shuttle Run","bw","Conditioning",1,"cardio","Sprint out, touch the line, sprint back. Set a distance and repeat."],
+["Sprint in Place","bw","Conditioning",1,"cardio","All-out turnover for short bursts. Use when you have no space at all."],
+["Single Under","bw","Conditioning",1,"cardio gear:rope","One rope pass per jump. Small wrist circles, relaxed shoulders."],
+["Double Under","bw","Conditioning",3,"cardio skill gear:rope","Two rope passes per jump. Jump slightly higher and turn the wrists faster — not the arms."],
+["Mountain Climber Sprint","bw","Conditioning",2,"cardio core","Mountain climbers at max turnover for 20-30 seconds."],
+["Frog Jump","bw","Conditioning",2,"cardio legs jump","Deep squat, jump forward, land back in the squat. Continuous."],
+["Broad Jump Burpee","bw","Conditioning",3,"cardio legs jump push","Burpee, then a max broad jump instead of a vertical jump. Travels ground fast."],
+
+/* ---------- BODYWEIGHT : SKILL & MOBILITY ---------- */
+["Crow Pose","bw","Skill",2,"skill core","Knees on the triceps, weight forward until the feet float. Look ahead, not down."],
+["Handstand Walk","bw","Skill",3,"skill push","Freestanding handstand, then shift weight hand to hand. Long-term project."],
+["Bridge / Wheel","bw","Skill",2,"skill mobility","Press the hips up into a full arch from your back. Opens the hip flexors and shoulders."],
+["Rope Climb","bw","Skill",3,"pull skill gear:rope","J-hook the feet, stand up the rope, then re-grip high. Descend under control."],
+["World's Greatest Stretch","bw","Mobility",1,"mobility","Deep lunge, elbow to the instep, then rotate and open the chest to the ceiling."],
+["Downdog to Cobra","bw","Mobility",1,"mobility","Flow between the two, breathing through each position. Great between working sets."],
+["Cat-Cow","bw","Mobility",1,"mobility","Segment the spine into flexion and extension on the breath. Wakes up a stiff back."],
+["Arm Circles","bw","Mobility",1,"mobility","Big slow circles forward and back. Cheapest shoulder warm-up available."],
+["Leg Swings","bw","Mobility",1,"mobility","Front-to-back and side-to-side, holding something for balance. 10 each direction per leg."],
+["90/90 Hip Switch","bw","Mobility",1,"mobility","Seated with both knees at 90°, rotate the knees side to side without using the hands."],
+["Couch Stretch","bw","Mobility",2,"mobility gear:wall","Rear foot up a wall in a half kneel, squeeze the glute and stand tall. Hip flexors and quads."],
+["Thoracic Rotation","bw","Mobility",1,"mobility","Quadruped, hand behind the head, rotate the elbow up to the ceiling and back down."],
+["Scapular Push-Up","bw","Mobility",1,"push mobility","In a plank with locked elbows, protract and retract the shoulder blades only."],
+["Wrist Prep","bw","Mobility",1,"mobility","Rock forward and back on the palms, then the backs of the hands. Do it before any floor work."],
+["Deep Squat Hold","bw","Mobility",1,"mobility legs","Hang out in the bottom of a squat for 60-120 seconds. The best hip opener there is."],
+
+/* ---------- KETTLEBELL : BALLISTIC ---------- */
+["KB Two-Hand Swing","kb","Ballistic",1,"hinge cardio","Hike the bell back past the hips, then snap the hips forward. The bell floats — the arms don't lift it."],
+["KB One-Arm Swing","kb","Ballistic",2,"hinge cardio uni","Same hip snap, one hand. Resist the rotation with the free-side oblique."],
+["KB Hand-to-Hand Swing","kb","Ballistic",2,"hinge cardio","Release and catch the bell at the top of each swing. Keeps the grip fresh over long sets."],
+["KB Dead-Stop Swing","kb","Ballistic",2,"hinge","Set the bell down between every rep and restart from the floor. Removes the stretch reflex."],
+["KB American Swing","kb","Ballistic",2,"hinge cardio","Swing all the way overhead with the bell inverted. Needs good shoulder mobility — skip if yours is limited."],
+["KB Snatch","kb","Ballistic",3,"hinge push cardio uni","One motion from between the legs to overhead. Punch the hand through at the top so the bell doesn't bang the wrist."],
+["KB Half Snatch","kb","Ballistic",3,"hinge push uni","Snatch up, then lower to the rack before the next swing. Easier on the grip than full snatches."],
+["KB High Pull","kb","Ballistic",2,"hinge pull uni","Swing to chest height and pull the elbow back high and wide. The missing link to the snatch."],
+["KB Clean","kb","Ballistic",2,"hinge pull uni","Guide the bell around the wrist into the rack — don't let it flip over and crash."],
+["KB Dead Clean","kb","Ballistic",2,"hinge pull uni","Clean from a dead stop on the floor each rep. Great for grooving the technique."],
+["KB Swing Clean","kb","Ballistic",2,"hinge pull uni","Clean straight out of a backswing without touching down. The standard for cycling reps."],
+["KB Rotational Swing","kb","Ballistic",2,"hinge core uni","Swing across the body to one side, letting the hips rotate. Trains the obliques hard."],
+["KB Around the World","kb","Ballistic",1,"core","Pass the bell around the waist hand to hand in a circle. Great warm-up and grip work."],
+["KB Figure 8","kb","Ballistic",2,"core hinge","Hinge and pass the bell between the legs in a figure-eight pattern, hand to hand."],
+["KB Figure 8 to Hold","kb","Ballistic",2,"core hinge","Same figure eight, but catch and hold the bell at chest height on each pass."],
+["KB Staggered Stance Swing","kb","Ballistic",2,"hinge uni","One foot slightly forward. Loads one hip more than the other without going full single leg."],
+
+/* ---------- KETTLEBELL : PRESS ---------- */
+["KB Strict Press","kb","Press",2,"push uni","From the rack, press straight up while keeping the ribs down and the glute on that side tight."],
+["KB Push Press","kb","Press",2,"push legs uni","A small dip and drive from the legs, then finish the lockout with the arm."],
+["KB Push Jerk","kb","Press",3,"push legs uni","Dip, drive, then re-dip under the bell and catch it locked out. Fastest way to move a heavy bell overhead."],
+["KB Bottoms-Up Press","kb","Press",3,"push core uni","Press with the bell upside down, handle squeezed hard. Exposes any sloppiness instantly."],
+["KB Half-Kneeling Press","kb","Press",2,"push core uni","Same-side knee down. Removes the legs from the equation and forces the core to stabilize."],
+["KB Tall-Kneeling Press","kb","Press",2,"push core uni","Both knees down, glutes squeezed. No leg drive available at all."],
+["KB Z Press","kb","Press",3,"push core uni","Seated on the floor with the legs straight out. The most honest overhead press you can do."],
+["KB Floor Press","kb","Press",1,"push uni","Lying down, elbow lightly touches the floor and presses back up. Shoulder-friendly."],
+["KB Bridge Floor Press","kb","Press",2,"push hinge uni","Glute bridge held while floor pressing. Adds a posterior chain isometric."],
+["KB Overhead Hold","kb","Press",1,"push core uni","Lock the bell overhead, biceps by the ear, ribs down. Hold for time each side."],
+["KB Waiter Press","kb","Press",2,"push uni","Cup the bell base in an open palm like a tray and press. Forces a perfect vertical bar path."],
+["KB Bent Press","kb","Press",3,"push core uni skill","From the rack, sidebend and screw under the bell until the arm locks, then stand up. Old-school and heavy."],
+["KB Sots Press","kb","Press",3,"push mobility uni","Press overhead from the bottom of a squat. A mobility test disguised as a lift."],
+["KB Push-Up on Bell","kb","Press",2,"push core","One hand on the handle, one on the floor. Adds range and an anti-rotation demand."],
+["KB Seesaw Floor Press","kb","Press",2,"push uni","Single bell alternating sides on the floor, resetting the shoulder each rep."],
+
+/* ---------- KETTLEBELL : SQUAT ---------- */
+["KB Goblet Squat","kb","Squat",1,"legs","Hold the horns at the chest, elbows inside the knees at the bottom. The best squat teacher there is."],
+["KB Front Rack Squat","kb","Squat",2,"legs uni","One bell in the rack. The offset load makes the trunk work overtime to stay square."],
+["KB Overhead Squat","kb","Squat",3,"legs push uni mobility","Bell locked overhead the whole way down and up. Demands real shoulder and hip mobility."],
+["KB Goblet Reverse Lunge","kb","Squat",1,"legs uni","Goblet hold, step back, back knee to the floor, drive up through the front heel."],
+["KB Front Rack Lunge","kb","Squat",2,"legs uni","Bell racked on one side. Load the same side as the front leg to make it harder."],
+["KB Overhead Lunge","kb","Squat",3,"legs push uni","Bell locked overhead throughout. Punishing on the shoulder and the midline."],
+["KB Goblet Cossack Squat","kb","Squat",2,"legs uni mobility","Goblet hold as a counterbalance, sit deep into one hip with the other leg straight."],
+["KB Racked Bulgarian Split Squat","kb","Squat",3,"legs uni gear:bench","Rear foot elevated, bell in the rack. One of the highest-value single leg lifts."],
+["KB Goblet Squat Hold","kb","Squat",1,"legs core","Sit in the bottom of a goblet squat and hold. Ten seconds feels like a minute."],
+["KB Suitcase Squat","kb","Squat",1,"legs uni","Bell hanging at one side. Fight the sideways lean the whole set."],
+["KB Counterbalance Pistol","kb","Squat",3,"legs uni","Hold the bell out front as a counterweight for a single-leg squat. Often unlocks your first pistol."],
+["KB Goblet Good Morning","kb","Squat",1,"hinge","Bell at the chest, push the hips back with soft knees. Teaches the hinge better than words do."],
+["KB Racked Step-Up","kb","Squat",2,"legs uni gear:box","Bell racked, full foot on the box, no push off the back leg."],
+["KB Goblet Curtsy Lunge","kb","Squat",2,"legs uni","Step back and across. Glute medius work with a load."],
+["KB Thruster","kb","Squat",2,"legs push uni cardio","Front squat straight into an overhead press in one continuous motion. Breathing gets ugly fast."],
+
+/* ---------- KETTLEBELL : HINGE & PULL ---------- */
+["KB Deadlift","kb","Hinge",1,"hinge","Bell between the feet, hinge and stand. Flat back, lats tight, finish with the glutes."],
+["KB Sumo Deadlift","kb","Hinge",1,"hinge","Wide stance, bell between the feet, knees pushed out. More quad, less lower back."],
+["KB Suitcase Deadlift","kb","Hinge",2,"hinge uni","Bell at one side. Anti-lateral-flexion work while you pull."],
+["KB Romanian Deadlift","kb","Hinge",2,"hinge","Start standing, push the hips back with soft knees until the hamstrings stretch, then stand."],
+["KB Single-Leg Deadlift","kb","Hinge",2,"hinge uni","Hinge over one leg with the bell in the opposite hand. Hips level, no rotation."],
+["KB Bent-Over Row","kb","Hinge",1,"pull uni","Hinge to about 45°, row the bell to the hip. Squeeze the lat, don't shrug."],
+["KB Gorilla Row","kb","Hinge",2,"pull uni","Stay hinged over, alternate rowing the bell off the floor with a free hand on the knee for support."],
+["KB Renegade Row","kb","Hinge",3,"pull core uni","Plank on one hand and the bell, row the bell to the ribs without the hips twisting."],
+["KB Upright Row","kb","Hinge",1,"pull","Pull the bell up the body with high elbows. Stop at chest height if the shoulders complain."],
+["KB Dead-Stop Row","kb","Hinge",2,"pull uni","Row from a full stop on the floor every rep. No momentum, all lat."],
+["KB Good Morning","kb","Hinge",2,"hinge","Bell held on the back of the shoulders or in the rack, hinge with a flat back."],
+["KB Swing High Pull Ladder","kb","Hinge",2,"hinge pull cardio","Alternate a swing and a high pull, adding a rep each round."],
+
+/* ---------- KETTLEBELL : GRIND & GET-UP ---------- */
+["KB Turkish Get-Up","kb","Grind",3,"core push skill uni","Floor to standing and back with the bell locked overhead the whole time. Seven positions, no rushing."],
+["KB Half Get-Up","kb","Grind",2,"core push uni","Get-up stopping at the tall sit or the high bridge, then reverse. All the value, half the complexity."],
+["KB Get-Up Sit-Up","kb","Grind",1,"core push uni","Just the first roll-to-elbow portion of the get-up. A great core and shoulder starter."],
+["KB Windmill","kb","Grind",3,"core mobility uni","Bell locked overhead, push the hips out and hinge to touch the floor while watching the bell."],
+["KB Half-Kneeling Windmill","kb","Grind",2,"core mobility uni","Same shape from a half-kneeling base. Easier to learn and easier on the hamstrings."],
+["KB Arm Bar","kb","Grind",2,"mobility push uni","Lying on your side, bell locked overhead, roll onto the belly while the arm stays vertical. Superb shoulder prep."],
+["KB Crooked Arm Bar","kb","Grind",3,"mobility push uni","Arm bar with the free arm behind the head, deepening the thoracic rotation."],
+
+/* ---------- KETTLEBELL : CARRY ---------- */
+["KB Suitcase Carry","kb","Carry",1,"carry core uni","Bell at one side, shoulders level, walk tall. Don't let the ribs flare toward the load."],
+["KB Rack Carry","kb","Carry",1,"carry core uni","Bell in the front rack, elbow tight to the body. Breathe behind the brace."],
+["KB Overhead Carry","kb","Carry",2,"carry core push uni","Bell locked out overhead. Ribs down, biceps by the ear the whole way."],
+["KB Bottoms-Up Carry","kb","Carry",3,"carry core uni","Bell upside down in the rack, crushing the handle. Grip and shoulder stability in one."],
+["KB Farmer's March","kb","Carry",1,"carry core uni","Stand in place holding the bell and march the knees up high. Carry work without the space."],
+["KB Cross-Body Carry","kb","Carry",2,"carry core uni","One bell racked, walk with high knees. Or hold overhead on one side and racked on the other across sets."],
+
+/* ---------- KETTLEBELL : CORE ---------- */
+["KB Halo","kb","Core",1,"core mobility","Circle the bell around the head, close to the skull, elbows tight. Shoulder mobility gold."],
+["KB Halo + Squat","kb","Core",2,"core legs mobility","One halo at the top, then squat and hold. Combo warm-up."],
+["KB Russian Twist","kb","Core",2,"core","Feet up, bell held at the chest, rotate the shoulders side to side under control."],
+["KB Sit-Up","kb","Core",2,"core","Bell held at the chest or pressed overhead as you sit all the way up."],
+["KB Overhead Sit-Up","kb","Core",3,"core push uni","One arm locked out overhead the whole sit-up. Ruthless on the shoulder."],
+["KB Windshield Wiper","kb","Core",3,"core uni","Bell pressed up, legs sweeping side to side. Move slowly."],
+["KB Plank Pull-Through","kb","Core",2,"core","In a high plank, drag the bell from one side to the other under the body. Hips stay square."],
+["KB Dead Bug","kb","Core",2,"core uni","Bell pressed up in one hand, lower the opposite arm and leg. Low back stays flat."],
+["KB Suitcase March","kb","Core",1,"core carry uni","Bell in one hand, march in place. Anti-lateral-flexion without walking."],
+["KB Side Bend","kb","Core",1,"core uni","Bell at one side, bend toward it and return. Small range, controlled."],
+
+/* ---------- KETTLEBELL : COMPLEXES ---------- */
+["KB Clean & Press","kb","Complex",2,"push hinge uni","Clean into the rack, then press. One rep is both movements."],
+["KB Clean & Jerk (Long Cycle)","kb","Complex",3,"push hinge legs uni cardio","Clean, jerk overhead, return to the rack, and clean again. The classic long cycle."],
+["KB Devil's Press","kb","Complex",3,"push hinge cardio uni","Burpee with the bell, then a single-arm snatch straight from the floor to overhead."],
+["KB Man Maker","kb","Complex",3,"push pull core cardio uni","Push-up on the bell, renegade row, clean, then press. Everything at once."],
+["KB Snatch + Overhead Squat","kb","Complex",3,"push legs hinge uni","Snatch it up, squat it down. A full-body brutalizer."],
+["KB Swing + Goblet Squat","kb","Complex",1,"hinge legs cardio","Alternate swings and goblet squats. Simple and endlessly scalable."],
+["KB Clean, Squat, Press","kb","Complex",2,"push legs hinge uni","Three positions, one rep. The single best bang-for-buck kettlebell complex."],
+["KB Armor Building Complex","kb","Complex",3,"push pull legs uni","2 cleans, 1 press, 3 front squats per side. Repeat on the minute."],
+["KB Flow: Clean-Press-Squat-Snatch","kb","Complex",3,"push legs hinge uni skill","Chain the four movements without setting the bell down. Pick a light bell first."],
+["KB Dead Snatch + Press","kb","Complex",3,"push hinge uni","Snatch from a dead stop on the floor, then a strict press from the rack."],
+
+/* ---------- KETTLEBELL : CONDITIONING ---------- */
+["KB Burpee Over Bell","kb","Conditioning",2,"cardio push legs","Burpee beside the bell, then jump or step laterally over it. Repeat."],
+["KB Lateral Bell Hop","kb","Conditioning",2,"cardio jump","Two-foot hops back and forth over the bell. Quick and light."],
+["KB Swing Sprint","kb","Conditioning",2,"hinge cardio","Max-effort swings for 20-30 seconds. Hips only — the moment the arms take over, stop."],
+["KB Rack Hold Squat Sprint","kb","Conditioning",3,"legs cardio uni","Bell racked, squat as fast as form allows for time."],
+];
+
+const EX = RAW.map((r, i) => ({
+  id: i,
+  name: r[0],
+  eq: r[1],
+  group: r[2],
+  level: r[3],
+  tags: r[4].split(" "),
+  cues: r[5],
+  uni: r[4].includes("uni"),
+  gear: (r[4].match(/gear:[a-z]+/g) || []).map(g => g.slice(5))
+}));
+
+/* ==================== CORE ==================== */
+const $ = (s, r) => (r || document).querySelector(s);
+const $$ = (s, r) => [...(r || document).querySelectorAll(s)];
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const pad = n => String(n).padStart(2, "0");
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+const fmt = s => { s = Math.max(0, Math.round(s)); const h = Math.floor(s / 3600), m = Math.floor(s % 3600 / 60), x = s % 60; return h ? h + ":" + pad(m) + ":" + pad(x) : m + ":" + pad(x); };
+const fmtLong = s => { s = Math.max(0, Math.round(s)); const m = Math.floor(s / 60), x = s % 60; return pad(m) + ":" + pad(x); };
+const uid = () => "w" + (idSeed++).toString(36) + Math.floor(perfRand() * 1e6).toString(36);
+let idSeed = Date.now() % 1e7;
+const perfRand = () => Math.random();
+const pick = a => a[Math.floor(Math.random() * a.length)];
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1));[a[i], a[j]] = [a[j], a[i]]; } return a; };
+
+/* ---- storage (localStorage w/ in-memory fallback) ---- */
+const mem = {};
+const store = {
+  get(k, d) {
+    try { const v = localStorage.getItem("im_" + k); if (v != null) return JSON.parse(v); } catch (e) { }
+    return k in mem ? mem[k] : d;
+  },
+  set(k, v) {
+    mem[k] = v;
+    try { localStorage.setItem("im_" + k, JSON.stringify(v)); } catch (e) { }
+  }
+};
+
+const DEF_SETTINGS = { sound: true, voice: true, prep: 10, wake: true, gear: { bar: true, box: true, bench: true, wall: true, rope: false }, kbw: "", flash: true };
+let S = Object.assign({}, DEF_SETTINGS, store.get("settings", {}));
+S.gear = Object.assign({}, DEF_SETTINGS.gear, S.gear || {});
+const saveS = () => store.set("settings", S);
+
+let HIST = store.get("hist", []);
+let MYW = store.get("myw", []);
+const saveHist = () => store.set("hist", HIST);
+const saveMyw = () => store.set("myw", MYW);
+
+/* ---- toast ---- */
+let toastT;
+function toast(msg) {
+  const t = $("#toast"); t.textContent = msg; t.classList.add("on");
+  clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove("on"), 2000);
+}
+
+/* ---- audio ---- */
+let AC = null, audioReady = false;
+function initAudio() {
+  if (AC) { if (AC.state === "suspended") AC.resume(); return; }
+  try {
+    AC = new (window.AudioContext || window.webkitAudioContext)();
+    const b = AC.createBuffer(1, 1, 22050), s = AC.createBufferSource();
+    s.buffer = b; s.connect(AC.destination); s.start(0);
+    audioReady = true;
+  } catch (e) { }
+}
+function beep(freq, dur, vol, type) {
+  if (!S.sound || !AC) return;
+  try {
+    if (AC.state === "suspended") AC.resume();
+    const o = AC.createOscillator(), g = AC.createGain();
+    o.type = type || "sine"; o.frequency.value = freq;
+    g.gain.setValueAtTime(0, AC.currentTime);
+    g.gain.linearRampToValueAtTime(vol == null ? .28 : vol, AC.currentTime + .012);
+    g.gain.exponentialRampToValueAtTime(.0001, AC.currentTime + dur);
+    o.connect(g); g.connect(AC.destination);
+    o.start(); o.stop(AC.currentTime + dur + .02);
+  } catch (e) { }
+}
+const sTick = () => beep(760, .1, .22, "triangle");
+const sGo = () => { beep(1150, .28, .34, "square"); setTimeout(() => beep(1550, .3, .3, "square"), 90); };
+const sRound = () => { beep(950, .16, .3, "square"); setTimeout(() => beep(1250, .2, .28, "square"), 130); };
+const sRest = () => beep(420, .3, .26, "sine");
+const sDone = () => { [660, 880, 1170].forEach((f, i) => setTimeout(() => beep(f, .35, .32, "square"), i * 150)); };
+function say(txt) {
+  if (!S.voice || !window.speechSynthesis) return;
+  try { const u = new SpeechSynthesisUtterance(txt); u.rate = 1.08; u.volume = 1; speechSynthesis.cancel(); speechSynthesis.speak(u); } catch (e) { }
+}
+
+/* ---- wake lock ---- */
+let wl = null;
+async function keepAwake(on) {
+  try {
+    if (on && S.wake && "wakeLock" in navigator) { wl = await navigator.wakeLock.request("screen"); }
+    else if (!on && wl) { await wl.release(); wl = null; }
+  } catch (e) { }
+}
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible" && RUN && RUN.running) keepAwake(true);
+});
+
+/* ---- nav ---- */
+function go(v) {
+  $$(".view").forEach(e => e.classList.toggle("on", e.id === "v-" + v));
+  $$("#nav button").forEach(b => b.classList.toggle("on", b.dataset.v === v));
+  $("#main").scrollTop = 0;
+}
+$$("#nav button").forEach(b => b.onclick = () => { initAudio(); go(b.dataset.v); });
+
+/* ---- sheet ---- */
+let sheetOnClose = null;
+function openSheet(title, html, onClose) {
+  $("#sheetTitle").textContent = title;
+  $("#sheetBody").innerHTML = html;
+  $("#sheet").classList.add("on"); $("#scrim").classList.add("on");
+  sheetOnClose = onClose || null;
+}
+function closeSheet() {
+  $("#sheet").classList.remove("on"); $("#scrim").classList.remove("on");
+  if (sheetOnClose) { const f = sheetOnClose; sheetOnClose = null; f(); }
+}
+$("#scrim").onclick = closeSheet;
+$("#sheetClose").onclick = closeSheet;
+
+document.body.addEventListener("touchstart", initAudio, { once: true });
+document.body.addEventListener("click", initAudio, { once: true });
+
+/* ==================== LIBRARY ==================== */
+const GEAR_LABEL = { bar: "Pull-up bar", box: "Box / step", bench: "Bench / chair", wall: "Wall space", rope: "Jump rope" };
+const LEVELS = ["", "Beginner", "Intermediate", "Advanced"];
+const HOLD_RE = /\b(Hold|Plank|Hang|Sit|Carry|March|Crawl|Walk|Stretch|Pose|Sprint)\b/i;
+const isHold = e => e.group === "Carry" || e.group === "Mobility" || (HOLD_RE.test(e.name) && !/Sit-Up|Pull-Up|Push-Up/i.test(e.name));
+
+function gearOk(e) { return e.gear.every(g => S.gear[g]); }
+
+const GROUPS = { bw: [], kb: [] };
+EX.forEach(e => { if (!GROUPS[e.eq].includes(e.group)) GROUPS[e.eq].push(e.group); });
+
+let LF = { eq: "all", group: "all", q: "" };
+
+function exRow(e, extra) {
+  return `<button class="ex" data-ex="${e.id}">
+    <span class="mark ${e.eq}">${e.eq === "kb" ? "KB" : "BW"}</span>
+    <span class="meta"><span class="nm">${esc(e.name)}</span>
+    <span class="gp">${e.group} · ${LEVELS[e.level]}${e.gear.length ? " · needs " + e.gear.map(g => GEAR_LABEL[g].toLowerCase()).join(", ") : ""}</span></span>
+    ${extra || '<span style="color:var(--dim);font-size:18px">›</span>'}
+  </button>`;
+}
+
+function renderLibChips() {
+  $("#libEq").innerHTML = [["all", "All"], ["bw", "Bodyweight"], ["kb", "Kettlebell"]]
+    .map(([k, l]) => `<button class="chip ${LF.eq === k ? "on " + (k === "kb" ? "kbc" : k === "bw" ? "bwc" : "") : ""}" data-eq="${k}">${l}</button>`).join("");
+  const gs = LF.eq === "all" ? [...new Set([...GROUPS.bw, ...GROUPS.kb])] : GROUPS[LF.eq];
+  $("#libGroup").innerHTML = `<button class="chip ${LF.group === "all" ? "on" : ""}" data-gp="all">Everything</button>` +
+    gs.map(g => `<button class="chip ${LF.group === g ? "on" : ""}" data-gp="${g}">${g}</button>`).join("");
+  $$("#libEq .chip").forEach(b => b.onclick = () => { LF.eq = b.dataset.eq; LF.group = "all"; renderLib(); });
+  $$("#libGroup .chip").forEach(b => b.onclick = () => { LF.group = b.dataset.gp; renderLib(); });
+}
+
+function libFilter() {
+  const q = LF.q.trim().toLowerCase();
+  return EX.filter(e =>
+    (LF.eq === "all" || e.eq === LF.eq) &&
+    (LF.group === "all" || e.group === LF.group) &&
+    (!q || e.name.toLowerCase().includes(q) || e.cues.toLowerCase().includes(q) || e.group.toLowerCase().includes(q) || e.tags.join(" ").includes(q))
+  );
+}
+
+function renderLib() {
+  renderLibChips();
+  const list = libFilter();
+  $("#libCount").textContent = list.length + " movement" + (list.length === 1 ? "" : "s");
+  if (!list.length) { $("#libList").innerHTML = `<div class="empty"><div class="big">🔍</div>Nothing matches that.</div>`; return; }
+  const byG = {};
+  list.forEach(e => { const k = (e.eq === "kb" ? "Kettlebell" : "Bodyweight") + " · " + e.group; (byG[k] = byG[k] || []).push(e); });
+  $("#libList").innerHTML = Object.entries(byG).map(([k, arr]) =>
+    `<h2 class="sec">${k} <span style="color:var(--surface3)">(${arr.length})</span></h2>` + arr.map(e => exRow(e)).join("")
+  ).join("");
+  bindExRows($("#libList"));
+}
+function bindExRows(root) {
+  $$(".ex[data-ex]", root).forEach(b => b.onclick = () => showEx(+b.dataset.ex));
+}
+
+function showEx(id) {
+  const e = EX[id];
+  const tagWords = e.tags.filter(t => !t.startsWith("gear:")).map(t => ({ push: "Push", pull: "Pull", legs: "Legs", hinge: "Hinge", core: "Core", cardio: "Conditioning", carry: "Loaded carry", skill: "Skill", mobility: "Mobility", uni: "Single side", jump: "Plyometric" }[t] || t));
+  openSheet(e.name, `
+    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px">
+      <span class="badge ${e.eq}">${e.eq === "kb" ? "Kettlebell" : "Bodyweight"}</span>
+      <span class="badge">${e.group}</span>
+      <span class="badge acc">${LEVELS[e.level]}</span>
+    </div>
+    <div style="font-size:15.5px;line-height:1.55;color:#dfe3e8">${esc(e.cues)}</div>
+    <div class="hr"></div>
+    <div>${tagWords.map(t => `<span class="pill">${t}</span>`).join("")}</div>
+    ${e.gear.length ? `<div class="tiny" style="margin-top:8px">Equipment: ${e.gear.map(g => GEAR_LABEL[g]).join(", ")}</div>` : ""}
+    <div class="hr"></div>
+    <button class="btn pri" id="exTimer">Add to the timer</button>
+    <div style="height:9px"></div>
+    <button class="btn" id="exFT">Just this, for time</button>
+  `);
+  $("#exTimer").onclick = () => { TM.items.push({ n: e.name, r: defReps(e) }); renderTimer(); closeSheet(); go("timer"); toast("Added to timer"); };
+  $("#exFT").onclick = () => {
+    closeSheet();
+    TM.mode = "fortime"; TM.items = [{ n: e.name, r: defReps(e, 3) }]; TM.name = e.name;
+    renderTimer(); go("timer"); toast("Set up — hit START when ready");
+  };
+}
+
+/* default rep prescription for a movement */
+function defReps(e, mult) {
+  mult = mult || 1;
+  if (isHold(e)) return (e.tags.includes("carry") ? 30 : 30) * mult + "s" + (e.uni ? "/side" : "");
+  const base = {
+    Push: 10, Pull: 6, Legs: 15, Hinge: 12, Core: 15, Conditioning: 12, Skill: 5, Mobility: 10,
+    Ballistic: 15, Press: 6, Squat: 10, Grind: 2, Carry: 30, Complex: 5
+  }[e.group] || 10;
+  let r = Math.round(base * mult);
+  if (e.eq === "kb" && e.uni) return r + "/side";
+  return String(r);
+}
+
+$("#libSearch").addEventListener("input", ev => { LF.q = ev.target.value; renderLib(); });
+
+/* ==================== TIMER CONFIG ==================== */
+const MODES = [
+  { k: "emom", n: "EMOM", d: "Every minute on the minute" },
+  { k: "amrap", n: "AMRAP", d: "As many rounds as possible" },
+  { k: "fortime", n: "FOR TIME", d: "Counts up until you're done" },
+  { k: "interval", n: "INTERVALS", d: "Work / rest, Tabata style" }
+];
+
+let TM = store.get("tm", null) || {
+  mode: "emom", name: "", interval: 60, rounds: 10, alt: false, ascend: false,
+  amrapSec: 720, capSec: 0, work: 30, rest: 30, ivRounds: 8, sets: 1, setRest: 60,
+  items: []
+};
+const saveTM = () => store.set("tm", TM);
+
+function stepper(id, val, min, max, step, suffix) {
+  return `<div class="stepper"><button data-st="${id}" data-d="-1">−</button>
+    <div class="val num" id="st-${id}">${val}${suffix || ""}</div>
+    <button data-st="${id}" data-d="1">＋</button></div>`;
+}
+function bindSteppers(cfg) {
+  $$("[data-st]").forEach(b => b.onclick = () => {
+    const c = cfg[b.dataset.st]; if (!c) return;
+    TM[c.key] = clamp(TM[c.key] + c.step * (+b.dataset.d), c.min, c.max);
+    saveTM(); renderTimer();
+  });
+}
+
+function renderTimer() {
+  $("#tmMode").innerHTML = MODES.map(m => `<button class="chip ${TM.mode === m.k ? "on" : ""}" data-md="${m.k}">${m.n}</button>`).join("");
+  $$("#tmMode .chip").forEach(b => b.onclick = () => { TM.mode = b.dataset.md; saveTM(); renderTimer(); });
+
+  const m = MODES.find(x => x.k === TM.mode);
+  let html = `<div class="tiny" style="margin:-2px 2px 12px">${m.d}</div>`;
+  let cfg = {};
+
+  if (TM.mode === "emom") {
+    cfg = { rd: { key: "rounds", min: 1, max: 60, step: 1 } };
+    html += `<label class="fld"><span>Interval</span>
+      <select id="tmInterval">${[20, 30, 40, 45, 60, 75, 90, 120, 150, 180].map(v => `<option value="${v}" ${TM.interval === v ? "selected" : ""}>${v < 60 ? v + " seconds" : fmtLong(v).replace(/^0/, "") + " min"}</option>`).join("")}</select></label>
+    <label class="fld"><span>Rounds (${fmtLong(TM.interval * TM.rounds)} total)</span>${stepper("rd", TM.rounds, 1, 60, 1)}</label>
+    <div class="card" style="padding:2px 14px">
+      <div class="sw"><div><div style="font-weight:650;font-size:14.5px">Alternate movements</div><div class="tiny">One movement per round instead of all of them</div></div><div class="tog ${TM.alt ? "on" : ""}" id="tgAlt"></div></div>
+      <div class="sw"><div><div style="font-weight:650;font-size:14.5px">Ascending reps</div><div class="tiny">Round 1 = 1 rep, round 2 = 2 reps… "death by"</div></div><div class="tog ${TM.ascend ? "on" : ""}" id="tgAsc"></div></div>
+    </div>`;
+  } else if (TM.mode === "amrap") {
+    cfg = { am: { key: "amrapSec", min: 60, max: 3600, step: 60 } };
+    html += `<label class="fld"><span>Duration</span>${stepper("am", fmtLong(TM.amrapSec), 60, 3600, 60)}</label>
+      <div class="chips">${[5, 8, 10, 12, 15, 20, 25, 30].map(v => `<button class="chip ${TM.amrapSec === v * 60 ? "on" : ""}" data-am="${v}">${v} min</button>`).join("")}</div>`;
+  } else if (TM.mode === "fortime") {
+    html += `<label class="fld"><span>Time cap</span>
+      <select id="tmCap"><option value="0" ${!TM.capSec ? "selected" : ""}>No cap</option>
+      ${[5, 8, 10, 12, 15, 20, 25, 30, 40, 45, 60].map(v => `<option value="${v * 60}" ${TM.capSec === v * 60 ? "selected" : ""}>${v} minutes</option>`).join("")}</select></label>
+      <div class="tiny" style="margin:-4px 2px 4px">The clock counts up. Tap LAP to record a round split, DONE when you finish.</div>`;
+  } else {
+    cfg = {
+      wk: { key: "work", min: 5, max: 600, step: 5 }, rs: { key: "rest", min: 0, max: 600, step: 5 },
+      ir: { key: "ivRounds", min: 1, max: 40, step: 1 }, se: { key: "sets", min: 1, max: 10, step: 1 },
+      sr: { key: "setRest", min: 0, max: 600, step: 15 }
+    };
+    const tot = (TM.work + TM.rest) * TM.ivRounds * TM.sets + TM.setRest * (TM.sets - 1);
+    html += `<div class="grid2">
+      <label class="fld"><span>Work</span>${stepper("wk", TM.work, 5, 600, 5, "s")}</label>
+      <label class="fld"><span>Rest</span>${stepper("rs", TM.rest, 0, 600, 5, "s")}</label>
+      <label class="fld"><span>Rounds</span>${stepper("ir", TM.ivRounds, 1, 40, 1)}</label>
+      <label class="fld"><span>Sets</span>${stepper("se", TM.sets, 1, 10, 1)}</label>
+    </div>
+    ${TM.sets > 1 ? `<label class="fld"><span>Rest between sets</span>${stepper("sr", TM.setRest, 0, 600, 15, "s")}</label>` : ""}
+    <div class="tiny" style="margin:-4px 2px 10px">Total ${fmtLong(tot)} · <button style="color:var(--acc);font-weight:700" id="tabataPre">use Tabata 20/10 ×8</button></div>`;
+  }
+  $("#tmConfig").innerHTML = html;
+  bindSteppers(cfg);
+
+  const iv = $("#tmInterval"); if (iv) iv.onchange = () => { TM.interval = +iv.value; saveTM(); renderTimer(); };
+  const cp = $("#tmCap"); if (cp) cp.onchange = () => { TM.capSec = +cp.value; saveTM(); };
+  const ta = $("#tgAlt"); if (ta) ta.onclick = () => { TM.alt = !TM.alt; saveTM(); renderTimer(); };
+  const tb = $("#tgAsc"); if (tb) tb.onclick = () => { TM.ascend = !TM.ascend; saveTM(); renderTimer(); };
+  const tp = $("#tabataPre"); if (tp) tp.onclick = () => { Object.assign(TM, { work: 20, rest: 10, ivRounds: 8, sets: 1 }); saveTM(); renderTimer(); };
+  $$("[data-am]").forEach(b => b.onclick = () => { TM.amrapSec = +b.dataset.am * 60; saveTM(); renderTimer(); });
+
+  // movements
+  $("#tmMoves").innerHTML = TM.items.length
+    ? TM.items.map((it, i) => `<div class="ex">
+        <span class="mark bw" style="background:var(--surface3);color:var(--mut)">${i + 1}</span>
+        <span class="meta"><span class="nm">${esc(it.n)}</span><span class="gp">${esc(it.r || "—")}</span></span>
+        <button class="iconbtn" data-up="${i}" style="width:30px;height:30px;font-size:13px">↑</button>
+        <button class="iconbtn" data-ed="${i}" style="width:30px;height:30px;font-size:13px">✎</button>
+        <button class="iconbtn" data-rm="${i}" style="width:30px;height:30px;font-size:13px">✕</button>
+      </div>`).join("")
+    : `<div class="tiny" style="padding:6px 2px 12px">No movements added — the timer works fine on its own, but adding them gives you an on-screen checklist and saves them to your log.</div>`;
+  $$("[data-rm]").forEach(b => b.onclick = () => { TM.items.splice(+b.dataset.rm, 1); saveTM(); renderTimer(); });
+  $$("[data-up]").forEach(b => b.onclick = () => { const i = +b.dataset.up; if (!i) return; [TM.items[i - 1], TM.items[i]] = [TM.items[i], TM.items[i - 1]]; saveTM(); renderTimer(); });
+  $$("[data-ed]").forEach(b => b.onclick = () => {
+    const i = +b.dataset.ed;
+    openSheet("Edit movement", `<label class="fld"><span>Movement</span><input type="text" id="edN" value="${esc(TM.items[i].n)}"></label>
+      <label class="fld"><span>Reps / duration</span><input type="text" id="edR" value="${esc(TM.items[i].r || "")}" placeholder="e.g. 10, 8/side, 30s"></label>
+      <button class="btn pri" id="edOk">Save</button>`);
+    $("#edOk").onclick = () => { TM.items[i] = { n: $("#edN").value.trim() || TM.items[i].n, r: $("#edR").value.trim() }; saveTM(); renderTimer(); closeSheet(); };
+  });
+}
+
+$("#tmAdd").onclick = () => pickExercise(e => { TM.items.push({ n: e.name, r: defReps(e) }); saveTM(); renderTimer(); });
+$("#tmStart").onclick = () => { initAudio(); startRun(TM, TM.name || autoName(TM)); };
+$("#tmSave").onclick = () => {
+  openSheet("Save workout", `<label class="fld"><span>Name</span><input type="text" id="swN" value="${esc(TM.name || autoName(TM))}"></label><button class="btn pri" id="swOk">Save to My Workouts</button>`);
+  $("#swOk").onclick = () => {
+    const w = JSON.parse(JSON.stringify(TM)); w.name = $("#swN").value.trim() || autoName(TM); w.id = uid();
+    MYW.unshift(w); saveMyw(); closeSheet(); renderTrain(); toast("Saved"); go("train");
+  };
+};
+
+function autoName(t) {
+  if (t.mode === "emom") return t.interval === 60 ? `EMOM ${t.rounds}` : `EMOM ${t.interval}s × ${t.rounds}`;
+  if (t.mode === "amrap") return `AMRAP ${t.amrapSec / 60}`;
+  if (t.mode === "interval") return `${t.work}/${t.rest} × ${t.ivRounds}${t.sets > 1 ? " × " + t.sets : ""}`;
+  return "For Time";
+}
+
+/* exercise picker sheet */
+function pickExercise(cb) {
+  openSheet("Add a movement", `<input type="search" id="pkQ" placeholder="Search…" autocomplete="off">
+    <div class="chips" style="margin-top:10px" id="pkEq"></div>
+    <div id="pkList" style="max-height:52vh;overflow-y:auto"></div>`);
+  let pe = "all", pq = "";
+  const draw = () => {
+    $("#pkEq").innerHTML = [["all", "All"], ["bw", "Bodyweight"], ["kb", "Kettlebell"]].map(([k, l]) => `<button class="chip ${pe === k ? "on" : ""}" data-pe="${k}">${l}</button>`).join("");
+    $$("[data-pe]").forEach(b => b.onclick = () => { pe = b.dataset.pe; draw(); });
+    const l = EX.filter(e => (pe === "all" || e.eq === pe) && (!pq || e.name.toLowerCase().includes(pq) || e.group.toLowerCase().includes(pq))).slice(0, 300);
+    $("#pkList").innerHTML = l.map(e => exRow(e, '<span style="color:var(--acc);font-size:20px">＋</span>')).join("");
+    $$("#pkList .ex").forEach(b => b.onclick = () => { cb(EX[+b.dataset.ex]); closeSheet(); toast("Added"); });
+  };
+  draw();
+  $("#pkQ").addEventListener("input", ev => { pq = ev.target.value.trim().toLowerCase(); draw(); });
+}
+
+/* ==================== RUNNER ==================== */
+let RUN = null, rafId = null;
+const RC = 282.74; // ring circumference
+
+function buildSegments(t) {
+  const segs = [];
+  for (let s = 0; s < t.sets; s++) {
+    for (let r = 0; r < t.ivRounds; r++) {
+      segs.push({ type: "work", dur: t.work, round: r + 1, set: s + 1 });
+      if (t.rest > 0) segs.push({ type: "rest", dur: t.rest, round: r + 1, set: s + 1 });
+    }
+    if (s < t.sets - 1 && t.setRest > 0) segs.push({ type: "rest", dur: t.setRest, round: t.ivRounds, set: s + 1, setBreak: true });
+  }
+  return segs;
+}
+
+function itemsHTML(items, curIdx, ascendRep) {
+  if (!items || !items.length) return "";
+  return items.map((it, i) => `<div class="mv ${curIdx === i ? "cur" : ""}"><span class="r num">${esc(ascendRep != null ? ascendRep : (it.r || "·"))}</span><span class="n">${esc(it.n)}</span></div>`).join("");
+}
+
+function startRun(t, name) {
+  const cfg = JSON.parse(JSON.stringify(t));
+  RUN = {
+    cfg, name: name || "Workout", mode: cfg.mode,
+    t0: performance.now(), pauseAcc: 0, pauseStart: 0, paused: false, running: true,
+    prep: S.prep, lastSec: -999, rounds: 0, splits: [], finished: false,
+    segs: cfg.mode === "interval" ? buildSegments(cfg) : null, curSeg: -1, curRound: -1
+  };
+  if (RUN.segs) RUN.segTotal = RUN.segs.reduce((a, s) => a + s.dur, 0);
+  $("#runner").classList.add("on");
+  $("#rTitle").textContent = RUN.name;
+  updateSoundIcon();
+  buildRunnerUI();
+  keepAwake(true);
+  loop();
+}
+function updateSoundIcon() { $("#rSound").textContent = S.sound ? "🔊" : "🔇"; }
+$("#rSound").onclick = () => { S.sound = !S.sound; saveS(); updateSoundIcon(); };
+
+function buildRunnerUI() {
+  const t = RUN.cfg;
+  const ring = `<div class="ring"><svg viewBox="0 0 100 100"><circle class="bgc" cx="50" cy="50" r="45"/><circle class="fgc" id="rRing" cx="50" cy="50" r="45" stroke-dasharray="${RC}" stroke-dashoffset="0"/></svg>
+    <div class="inner"><div class="clock num" id="rClock">--</div><div class="sublbl num" id="rSub"></div></div></div>`;
+  let mid = `<div class="phase" id="rPhase">GET READY</div>` + ring + `<div class="movelist" id="rMoves"></div>`;
+  if (RUN.mode === "amrap") {
+    mid = `<div class="phase" id="rPhase">AMRAP ${fmtLong(t.amrapSec)}</div>` + ring +
+      `<div class="movelist" id="rMoves"></div>`;
+  }
+  $("#rMid").innerHTML = mid;
+
+  let bot = "";
+  if (RUN.mode === "amrap") {
+    bot = `<button class="btn pri bigbtn" id="rRound">＋ ROUND <span class="num" id="rCount">0</span></button>
+      <div class="grid2"><button class="btn" id="rPause">PAUSE</button><button class="btn bad" id="rDone">FINISH</button></div>`;
+  } else if (RUN.mode === "fortime") {
+    bot = `<div class="grid2"><button class="btn" id="rLap">LAP <span class="num" id="rCount">0</span></button><button class="btn" id="rPause">PAUSE</button></div>
+      <button class="btn pri bigbtn" id="rDone">DONE — STOP THE CLOCK</button>`;
+  } else {
+    bot = `<div class="grid2"><button class="btn" id="rPause">PAUSE</button><button class="btn bad" id="rDone">FINISH</button></div>`;
+  }
+  $("#rBot").innerHTML = bot;
+
+  const rp = $("#rPause"); if (rp) rp.onclick = togglePause;
+  const rd = $("#rDone"); if (rd) rd.onclick = () => finishRun(false);
+  const rr = $("#rRound"); if (rr) rr.onclick = () => { RUN.rounds++; RUN.splits.push(elapsed()); $("#rCount").textContent = RUN.rounds; sTick(); };
+  const rl = $("#rLap"); if (rl) rl.onclick = () => { RUN.rounds++; RUN.splits.push(elapsed()); $("#rCount").textContent = RUN.rounds; sTick(); };
+  $("#rMoves").innerHTML = itemsHTML(t.items, -1);
+}
+
+function elapsed() {
+  const now = RUN.paused ? RUN.pauseStart : performance.now();
+  return (now - RUN.t0 - RUN.pauseAcc) / 1000 - RUN.prep;
+}
+function togglePause() {
+  if (!RUN) return;
+  if (RUN.paused) { RUN.pauseAcc += performance.now() - RUN.pauseStart; RUN.paused = false; $("#rPause").textContent = "PAUSE"; loop(); }
+  else { RUN.paused = true; RUN.pauseStart = performance.now(); $("#rPause").textContent = "RESUME"; cancelAnimationFrame(rafId); }
+}
+function setRing(frac) {
+  const r = $("#rRing"); if (r) r.setAttribute("stroke-dashoffset", RC * (1 - clamp(frac, 0, 1)));
+}
+function flash(on) { if (S.flash) $("#runner").classList.toggle("flash", !!on); }
+
+function loop() {
+  rafId = requestAnimationFrame(loop);
+  tick();
+}
+
+function tick() {
+  if (!RUN || RUN.finished) return;
+  const e = elapsed(), t = RUN.cfg, R = $("#runner");
+  const whole = Math.floor(e);
+
+  /* ---- prep countdown ---- */
+  if (e < 0) {
+    const left = Math.ceil(-e);
+    R.className = "on prep";
+    $("#rPhase").textContent = "GET READY";
+    $("#rClock").textContent = left;
+    $("#rSub").textContent = RUN.name;
+    setRing(1 + e / RUN.prep);
+    if (whole !== RUN.lastSec) {
+      RUN.lastSec = whole;
+      if (left <= 3 && left > 0) { sTick(); say(String(left)); }
+    }
+    return;
+  }
+  if (RUN.lastSec < 0 && e >= 0) { sGo(); say("Go"); RUN.lastSec = 0; }
+
+  /* ---- EMOM ---- */
+  if (RUN.mode === "emom") {
+    const total = t.interval * t.rounds;
+    if (e >= total) return finishRun(true);
+    const rd = Math.floor(e / t.interval);
+    const left = t.interval - (e % t.interval);
+    R.className = "on";
+    $("#rPhase").textContent = `ROUND ${rd + 1} OF ${t.rounds}`;
+    $("#rClock").textContent = fmtLong(Math.ceil(left));
+    $("#rSub").textContent = "total " + fmtLong(total - e);
+    setRing(left / t.interval);
+    if (rd !== RUN.curRound) {
+      RUN.curRound = rd; RUN.rounds = rd + 1;
+      const ci = t.alt && t.items.length ? rd % t.items.length : -1;
+      $("#rMoves").innerHTML = itemsHTML(t.items, ci, t.ascend ? rd + 1 : null);
+      if (rd > 0) { sRound(); flash(true); setTimeout(() => flash(false), 220); }
+      const cur = t.alt && t.items.length ? t.items[ci] : null;
+      if (rd > 0) say(cur ? cur.n : "Round " + (rd + 1));
+    }
+    if (whole !== RUN.lastSec) {
+      RUN.lastSec = whole;
+      const l = Math.ceil(left);
+      if (l <= 3 && l > 0 && e > 1) sTick();
+    }
+    return;
+  }
+
+  /* ---- AMRAP ---- */
+  if (RUN.mode === "amrap") {
+    const left = t.amrapSec - e;
+    if (left <= 0) return finishRun(true);
+    R.className = "on";
+    $("#rClock").textContent = fmtLong(Math.ceil(left));
+    $("#rSub").textContent = "elapsed " + fmtLong(e);
+    $("#rPhase").textContent = `AMRAP · ${RUN.rounds} ROUND${RUN.rounds === 1 ? "" : "S"}`;
+    setRing(left / t.amrapSec);
+    if (whole !== RUN.lastSec) {
+      RUN.lastSec = whole;
+      const l = Math.ceil(left);
+      if (l <= 3 && l > 0) sTick();
+      else if (l === 60 && t.amrapSec > 120) { sRest(); say("One minute"); }
+    }
+    return;
+  }
+
+  /* ---- FOR TIME ---- */
+  if (RUN.mode === "fortime") {
+    R.className = "on";
+    if (t.capSec && e >= t.capSec) return finishRun(true);
+    $("#rClock").textContent = fmtLong(e);
+    $("#rPhase").textContent = "FOR TIME";
+    $("#rSub").textContent = t.capSec ? "cap in " + fmtLong(t.capSec - e) : (RUN.splits.length ? "last split " + fmtLong(RUN.splits[RUN.splits.length - 1]) : "go");
+    setRing(t.capSec ? 1 - e / t.capSec : (e % 60) / 60);
+    if (whole !== RUN.lastSec) {
+      RUN.lastSec = whole;
+      if (t.capSec) { const l = Math.ceil(t.capSec - e); if (l <= 3 && l > 0) sTick(); }
+    }
+    return;
+  }
+
+  /* ---- INTERVALS ---- */
+  if (RUN.mode === "interval") {
+    let acc = 0, idx = -1, segLeft = 0, seg = null;
+    for (let i = 0; i < RUN.segs.length; i++) {
+      if (e < acc + RUN.segs[i].dur) { idx = i; seg = RUN.segs[i]; segLeft = acc + RUN.segs[i].dur - e; break; }
+      acc += RUN.segs[i].dur;
+    }
+    if (idx === -1) return finishRun(true);
+    R.className = "on " + seg.type;
+    $("#rPhase").textContent = seg.setBreak ? "SET BREAK" : seg.type.toUpperCase();
+    $("#rClock").textContent = fmtLong(Math.ceil(segLeft));
+    $("#rSub").textContent = `round ${seg.round}/${t.ivRounds}` + (t.sets > 1 ? ` · set ${seg.set}/${t.sets}` : "") + ` · total ${fmtLong(RUN.segTotal - e)}`;
+    setRing(segLeft / seg.dur);
+    if (idx !== RUN.curSeg) {
+      RUN.curSeg = idx;
+      RUN.rounds = seg.round + (seg.set - 1) * t.ivRounds;
+      const ci = t.items.length ? (seg.round - 1) % t.items.length : -1;
+      $("#rMoves").innerHTML = itemsHTML(t.items, seg.type === "work" ? ci : -1);
+      if (seg.type === "work") { sRound(); flash(true); setTimeout(() => flash(false), 220); say(t.items.length ? t.items[ci].n : "Work"); }
+      else { sRest(); say(seg.setBreak ? "Set break" : "Rest"); }
+    }
+    if (whole !== RUN.lastSec) {
+      RUN.lastSec = whole;
+      const l = Math.ceil(segLeft);
+      if (l <= 3 && l > 0) sTick();
+    }
+    return;
+  }
+}
+
+function finishRun(natural) {
+  if (!RUN || RUN.finished) return;
+  RUN.finished = true; RUN.running = false;
+  cancelAnimationFrame(rafId);
+  keepAwake(false);
+  const e = Math.max(0, elapsed()), t = RUN.cfg;
+  sDone(); say("Time");
+  $("#runner").className = "on";
+
+  let result = {}, headline = "";
+  if (RUN.mode === "fortime") {
+    const capped = t.capSec && e >= t.capSec;
+    result = { timeSec: Math.round(e), capped: !!capped, rounds: RUN.rounds };
+    headline = capped ? "Time capped at " + fmtLong(t.capSec) : fmtLong(e);
+  } else if (RUN.mode === "amrap") {
+    result = { rounds: RUN.rounds, timeSec: Math.round(Math.min(e, t.amrapSec)) };
+    headline = RUN.rounds + " round" + (RUN.rounds === 1 ? "" : "s");
+  } else if (RUN.mode === "emom") {
+    const done = clamp(Math.ceil(e / t.interval), 0, t.rounds);
+    result = { rounds: done, timeSec: Math.round(e) };
+    headline = done + " / " + t.rounds + " rounds";
+  } else {
+    const done = RUN.rounds || 0;
+    result = { rounds: done, timeSec: Math.round(e) };
+    headline = fmtLong(e) + " · " + done + " rounds";
+  }
+  RUN.result = result; RUN.headline = headline;
+  showFinish(natural);
+}
+
+function showFinish(natural) {
+  const t = RUN.cfg, r = RUN.result;
+  const prev = bestFor(RUN.name, RUN.mode);
+  let prMsg = "";
+  if (prev) {
+    const better = RUN.mode === "fortime" ? (r.timeSec < prev.r.timeSec && !r.capped) : (r.rounds > prev.r.rounds);
+    prMsg = better
+      ? `<div class="card" style="border-color:var(--ok);background:rgba(52,211,153,.08)"><b style="color:var(--ok)">🏆 New personal record</b><div class="sub">Previous best: ${scoreText(prev.mode, prev.r)}</div></div>`
+      : `<div class="tiny" style="margin-bottom:10px">Your best so far: ${scoreText(prev.mode, prev.r)}</div>`;
+  }
+  const splits = RUN.splits.length ? `<div class="hr"></div><div class="tiny" style="margin-bottom:6px">SPLITS</div>` +
+    RUN.splits.map((s, i) => `<div class="row" style="justify-content:space-between;padding:4px 0;font-size:13.5px"><span style="color:var(--mut)">Round ${i + 1}</span><span class="num">${fmtLong(s)}${i ? ` <span style="color:var(--dim)">(+${fmtLong(s - RUN.splits[i - 1])})</span>` : ""}</span></div>`).join("") : "";
+
+  $("#rMid").innerHTML = `<div class="phase" style="color:var(--ok)">${natural ? "TIME" : "COMPLETE"}</div>
+    <div class="clock num" style="font-size:clamp(44px,15vw,86px)">${esc(RUN.headline)}</div>
+    <div class="sublbl">${esc(RUN.name)}</div>`;
+  $("#rBot").innerHTML = `<button class="btn pri bigbtn" id="fSave">SAVE TO LOG</button>
+    <div class="grid2"><button class="btn" id="fAgain">REPEAT</button><button class="btn gho" id="fSkip">DISCARD</button></div>`;
+
+  $("#fSave").onclick = () => {
+    openSheet("Save result", `${prMsg}
+      <label class="fld"><span>Workout name</span><input type="text" id="fN" value="${esc(RUN.name)}"></label>
+      <div class="card" style="text-align:center"><div style="font-size:30px;font-weight:800" class="num">${esc(RUN.headline)}</div><div class="tiny">${MODES.find(m => m.k === RUN.mode).n}</div></div>
+      ${RUN.mode === "amrap" ? `<label class="fld"><span>Extra reps past the last full round</span><input type="number" id="fX" inputmode="numeric" placeholder="0"></label>` : ""}
+      <label class="fld"><span>Notes (optional)</span><textarea id="fNotes" rows="2" placeholder="Bell weight, how it felt, scaling…">${S.kbw ? esc(S.kbw) + " bell" : ""}</textarea></label>
+      ${splits}
+      <button class="btn pri" id="fOk">Save</button>`);
+    $("#fOk").onclick = () => {
+      const x = $("#fX");
+      HIST.unshift({
+        id: uid(), ts: Date.now(), name: $("#fN").value.trim() || RUN.name, mode: RUN.mode,
+        r: Object.assign({}, RUN.result, x && x.value ? { extra: +x.value } : {}),
+        items: RUN.cfg.items, splits: RUN.splits.map(s => Math.round(s)), notes: $("#fNotes").value.trim(),
+        cfgText: cfgText(RUN.cfg)
+      });
+      saveHist(); closeSheet(); closeRunner(); renderLog(); go("log"); toast("Logged 💪");
+    };
+  };
+  $("#fAgain").onclick = () => { const c = RUN.cfg, n = RUN.name; closeRunner(); setTimeout(() => startRun(c, n), 120); };
+  $("#fSkip").onclick = closeRunner;
+}
+
+function closeRunner() {
+  cancelAnimationFrame(rafId); keepAwake(false);
+  $("#runner").classList.remove("on"); $("#runner").className = "";
+  RUN = null;
+}
+$("#rQuit").onclick = () => {
+  if (!RUN) return closeRunner();
+  if (RUN.finished) return closeRunner();
+  if (elapsed() > 5) { if (!confirm("Quit this workout? Nothing will be saved.")) return; }
+  closeRunner();
+};
+
+function cfgText(t) {
+  if (t.mode === "emom") return `EMOM · ${cfgDetail(t)}`;
+  if (t.mode === "amrap") return `AMRAP · ${cfgDetail(t)}`;
+  if (t.mode === "fortime") return `For time · ${cfgDetail(t)}`;
+  return `Intervals · ${cfgDetail(t)}`;
+}
+function cfgDetail(t) {
+  if (t.mode === "emom") return `${t.rounds} × ${t.interval < 60 ? t.interval + "s" : fmtLong(t.interval).replace(/^0/, "") + " min"}`;
+  if (t.mode === "amrap") return fmtLong(t.amrapSec).replace(/^0/, "") + " min";
+  if (t.mode === "fortime") return t.capSec ? `${fmtLong(t.capSec)} cap` : "no cap";
+  return `${t.work}s on / ${t.rest}s off × ${t.ivRounds}${t.sets > 1 ? " × " + t.sets + " sets" : ""}`;
+}
+function scoreText(mode, r) {
+  if (mode === "fortime") return (r.capped ? "capped " : "") + fmtLong(r.timeSec);
+  if (mode === "amrap") return r.rounds + " rds" + (r.extra ? " + " + r.extra : "");
+  return r.rounds + " rds";
+}
+function bestFor(name, mode) {
+  const l = HIST.filter(h => h.name === name && h.mode === mode);
+  if (!l.length) return null;
+  if (mode === "fortime") { const v = l.filter(h => !h.r.capped); if (!v.length) return null; return v.reduce((a, b) => b.r.timeSec < a.r.timeSec ? b : a); }
+  return l.reduce((a, b) => (b.r.rounds + (b.r.extra || 0) / 1000) > (a.r.rounds + (a.r.extra || 0) / 1000) ? b : a);
+}
+
+/* ==================== PRESETS ==================== */
+const PRESETS = [
+  /* ---------- BODYWEIGHT ---------- */
+  {
+    name: "The 5-10-15", eq: "bw", mode: "amrap", amrapSec: 1200,
+    desc: "The classic bodyweight benchmark. Twenty minutes, three movements, no rest built in. Score is total rounds.",
+    items: [{ n: "Pull-Up", r: "5" }, { n: "Push-Up", r: "10" }, { n: "Air Squat", r: "15" }]
+  },
+  {
+    name: "5-10-15 On The Minute", eq: "bw", mode: "emom", interval: 60, rounds: 30,
+    desc: "Same triplet, but you get the rest of each minute to breathe. Thirty minutes is a grind.",
+    items: [{ n: "Pull-Up", r: "5" }, { n: "Push-Up", r: "10" }, { n: "Air Squat", r: "15" }]
+  },
+  {
+    name: "The Century", eq: "bw", mode: "fortime", capSec: 2700,
+    desc: "One hundred reps of each, done in any order and broken into any set sizes you like. A test of pacing more than strength.",
+    items: [{ n: "Pull-Up", r: "100" }, { n: "Push-Up", r: "100" }, { n: "Sit-Up", r: "100" }, { n: "Air Squat", r: "100" }]
+  },
+  {
+    name: "Death By Burpees", eq: "bw", mode: "emom", interval: 60, rounds: 30, ascend: true, alt: true,
+    desc: "One burpee the first minute, two the second, and so on. You're done when you can't finish the reps inside the minute — log the last round you completed.",
+    items: [{ n: "Burpee", r: "ascending" }]
+  },
+  {
+    name: "Tabata Core", eq: "bw", mode: "interval", work: 20, rest: 10, ivRounds: 8, sets: 4, setRest: 60,
+    desc: "Four Tabata blocks with a minute between them. Eight different core movements rotating through.",
+    items: [{ n: "Hollow Hold", r: "max" }, { n: "Mountain Climber", r: "max" }, { n: "Flutter Kick", r: "max" }, { n: "Plank", r: "hold" }, { n: "V-Up", r: "max" }, { n: "Russian Twist", r: "max" }, { n: "Bicycle Crunch", r: "max" }, { n: "Dead Bug", r: "max" }]
+  },
+  {
+    name: "The 300", eq: "bw", mode: "fortime", capSec: 2400,
+    desc: "Three hundred reps, four movements, one clock. Break it up early and you'll finish faster.",
+    items: [{ n: "Burpee", r: "50" }, { n: "Air Squat", r: "100" }, { n: "Sit-Up", r: "100" }, { n: "Push-Up", r: "50" }]
+  },
+  {
+    name: "Ten-Minute Grinder", eq: "bw", mode: "amrap", amrapSec: 600,
+    desc: "Short, nasty, and needs nothing but floor space. Go out too fast and the last three minutes will hurt.",
+    items: [{ n: "Burpee", r: "5" }, { n: "Jumping Lunge", r: "10" }, { n: "Mountain Climber", r: "20" }]
+  },
+  {
+    name: "21-15-9 Bodyweight", eq: "bw", mode: "fortime", capSec: 1200,
+    desc: "Three rounds descending. Twenty-one of each, then fifteen, then nine.",
+    items: [{ n: "Burpee", r: "21-15-9" }, { n: "Push-Up", r: "21-15-9" }, { n: "Air Squat", r: "21-15-9" }]
+  },
+  {
+    name: "Core On The Minute", eq: "bw", mode: "emom", interval: 60, rounds: 12, alt: true,
+    desc: "Twelve minutes, one core movement per minute, rotating through four. Rest is whatever's left of the minute.",
+    items: [{ n: "Hollow Hold", r: "40s" }, { n: "Plank", r: "45s" }, { n: "V-Up", r: "15" }, { n: "Side Plank", r: "30s/side" }]
+  },
+  {
+    name: "No-Gear Engine", eq: "bw", mode: "interval", work: 40, rest: 20, ivRounds: 4, sets: 5, setRest: 0,
+    desc: "Twenty minutes of forty-on, twenty-off through four stations. Pure conditioning, zero equipment.",
+    items: [{ n: "High Knees", r: "max" }, { n: "Squat Jump", r: "max" }, { n: "Push-Up", r: "max" }, { n: "Mountain Climber", r: "max" }]
+  },
+  {
+    name: "Pull Day Ladder", eq: "bw", mode: "emom", interval: 60, rounds: 20, alt: true,
+    desc: "Twenty minutes rotating through four pulling movements. Great for building pull-up volume without frying yourself.",
+    items: [{ n: "Pull-Up", r: "5" }, { n: "Inverted Row", r: "10" }, { n: "Hanging Knee Raise", r: "8" }, { n: "Superman", r: "15" }]
+  },
+  {
+    name: "Leg Burner", eq: "bw", mode: "fortime", capSec: 1200,
+    desc: "In order, straight through. The wall sit at the end is the whole point.",
+    items: [{ n: "Air Squat", r: "100" }, { n: "Walking Lunge", r: "50" }, { n: "Squat Jump", r: "50" }, { n: "Wall Sit", r: "2 min" }]
+  },
+
+  /* ---------- KETTLEBELL ---------- */
+  {
+    name: "Simple & Sinister", eq: "kb", mode: "fortime", capSec: 1800,
+    desc: "One hundred one-arm swings in sets of ten, then ten get-ups alternating sides. The most reliable single-bell program there is — do it most days.",
+    items: [{ n: "KB One-Arm Swing", r: "10 × 10" }, { n: "KB Turkish Get-Up", r: "5/side" }]
+  },
+  {
+    name: "Snatch Century", eq: "kb", mode: "fortime", capSec: 900,
+    desc: "One hundred snatches, switching hands whenever you need to. Grip and lungs both get a vote.",
+    items: [{ n: "KB Snatch", r: "100 total" }]
+  },
+  {
+    name: "Armor Building EMOM", eq: "kb", mode: "emom", interval: 60, rounds: 20,
+    desc: "Two cleans, one press, three front squats — all on one side, then swap sides the next minute. Twenty minutes builds a lot of muscle.",
+    items: [{ n: "KB Clean", r: "2" }, { n: "KB Strict Press", r: "1" }, { n: "KB Front Rack Squat", r: "3" }]
+  },
+  {
+    name: "Swing & Squat AMRAP", eq: "kb", mode: "amrap", amrapSec: 900,
+    desc: "Fifteen minutes of hinge, squat, push. Simple enough to hold form when you're gassed.",
+    items: [{ n: "KB Two-Hand Swing", r: "15" }, { n: "KB Goblet Squat", r: "10" }, { n: "Push-Up", r: "10" }]
+  },
+  {
+    name: "Long Cycle Minutes", eq: "kb", mode: "emom", interval: 60, rounds: 12,
+    desc: "Clean and jerk on the minute, five each side. Breathing is the skill here, not strength.",
+    items: [{ n: "KB Clean & Jerk (Long Cycle)", r: "5/side" }]
+  },
+  {
+    name: "Get-Up Ladder", eq: "kb", mode: "fortime", capSec: 1800,
+    desc: "Ten get-ups, alternating sides, no rush. Treat it as slow strength work — the clock is just a record, not a race.",
+    items: [{ n: "KB Turkish Get-Up", r: "5/side" }]
+  },
+  {
+    name: "Devil's Dozen", eq: "kb", mode: "fortime", capSec: 1200,
+    desc: "Twelve, nine, then six of each. The devil's press will take everything you have.",
+    items: [{ n: "KB Devil's Press", r: "12-9-6" }, { n: "KB Goblet Squat", r: "12-9-6" }]
+  },
+  {
+    name: "Goblet & Go", eq: "kb", mode: "interval", work: 45, rest: 15, ivRounds: 6, sets: 3, setRest: 60,
+    desc: "Six stations, forty-five seconds each, three times through. A full single-bell circuit in under twenty-five minutes.",
+    items: [{ n: "KB Goblet Squat", r: "max" }, { n: "KB One-Arm Swing", r: "max" }, { n: "KB Bent-Over Row", r: "max" }, { n: "KB Push Press", r: "max" }, { n: "KB Suitcase Carry", r: "walk" }, { n: "KB Halo", r: "max" }]
+  },
+  {
+    name: "Kettlebell Cindy", eq: "kb", mode: "amrap", amrapSec: 1200,
+    desc: "The bodyweight benchmark rebuilt around one bell. Twenty minutes, score is rounds.",
+    items: [{ n: "KB Clean & Press", r: "5/side" }, { n: "KB Goblet Squat", r: "10" }, { n: "KB Two-Hand Swing", r: "15" }]
+  },
+  {
+    name: "Single Bell Strength", eq: "kb", mode: "emom", interval: 60, rounds: 24, alt: true,
+    desc: "Rotating strength work on the minute. Heavier bell, lower reps, full recovery between the same movement.",
+    items: [{ n: "KB Strict Press", r: "5/side" }, { n: "KB Front Rack Squat", r: "8" }, { n: "KB Bent-Over Row", r: "8/side" }, { n: "KB Suitcase Carry", r: "40s" }]
+  },
+  {
+    name: "Swing Ladder", eq: "kb", mode: "emom", interval: 60, rounds: 20, ascend: true, alt: true,
+    desc: "One swing the first minute, two the next, all the way up. Stop when the minute beats you.",
+    items: [{ n: "KB Two-Hand Swing", r: "ascending" }]
+  },
+
+  /* ---------- MIXED ---------- */
+  {
+    name: "Half Hour Of Power", eq: "mix", mode: "amrap", amrapSec: 1800,
+    desc: "Thirty minutes, five movements, steady pace. This is the one to do when you have time and want to feel like you earned it.",
+    items: [{ n: "KB Two-Hand Swing", r: "20" }, { n: "Push-Up", r: "15" }, { n: "Air Squat", r: "20" }, { n: "KB Goblet Squat", r: "10" }, { n: "Burpee", r: "10" }]
+  },
+  {
+    name: "The Chipper", eq: "mix", mode: "fortime", capSec: 2100,
+    desc: "Work through the list top to bottom, one movement at a time. Break the big sets before you have to.",
+    items: [{ n: "Burpee", r: "50" }, { n: "KB Two-Hand Swing", r: "75" }, { n: "Air Squat", r: "100" }, { n: "KB Goblet Squat", r: "50" }, { n: "Sit-Up", r: "75" }, { n: "Push-Up", r: "50" }]
+  },
+  {
+    name: "Swing & Burpee 21-15-9", eq: "mix", mode: "fortime", capSec: 900,
+    desc: "Two movements, three rounds, descending reps. Under ten minutes if you're honest with yourself.",
+    items: [{ n: "KB Two-Hand Swing", r: "21-15-9" }, { n: "Burpee", r: "21-15-9" }]
+  },
+  {
+    name: "Ten Rounds", eq: "mix", mode: "fortime", capSec: 1800,
+    desc: "Ten rounds of the same three movements. Tap LAP at the end of each round to see how much you slow down.",
+    items: [{ n: "KB Clean & Press", r: "5/side ×10 rds" }, { n: "Pull-Up", r: "5 ×10 rds" }, { n: "Air Squat", r: "10 ×10 rds" }]
+  }
+];
+PRESETS.forEach((p, i) => { p.id = "p" + i; p.preset = true; });
+
+function presetToTM(p) {
+  return Object.assign({
+    mode: p.mode, name: p.name, interval: 60, rounds: 10, alt: false, ascend: false,
+    amrapSec: 720, capSec: 0, work: 30, rest: 30, ivRounds: 8, sets: 1, setRest: 60, items: []
+  }, p);
+}
+
+/* ==================== TRAIN VIEW ==================== */
+let PF = "all";
+function renderTrain() {
+  $("#quickStart").innerHTML = MODES.map(m => `<button class="card tap" data-qs="${m.k}" style="text-align:left;margin:0">
+    <div class="ttl" style="color:var(--acc)">${m.n}</div><div class="sub" style="font-size:12px">${m.d}</div></button>`).join("");
+  $$("[data-qs]").forEach(b => b.onclick = () => { TM.mode = b.dataset.qs; TM.name = ""; saveTM(); renderTimer(); go("timer"); });
+
+  $("#myWorkouts").innerHTML = MYW.length ? MYW.map(w => wCard(w)).join("")
+    : `<div class="tiny" style="padding:2px 2px 10px">Nothing saved yet. Build one below, or save a preset after you tweak it.</div>`;
+
+  $("#presetChips").innerHTML = [["all", "All"], ["bw", "Bodyweight"], ["kb", "Kettlebell"], ["mix", "Mixed"]]
+    .map(([k, l]) => `<button class="chip ${PF === k ? "on" : ""}" data-pf="${k}">${l}</button>`).join("");
+  $$("[data-pf]").forEach(b => b.onclick = () => { PF = b.dataset.pf; renderTrain(); });
+  $("#presetList").innerHTML = PRESETS.filter(p => PF === "all" || p.eq === PF).map(p => wCard(p)).join("");
+
+  $$("[data-w]").forEach(b => b.onclick = () => {
+    const id = b.dataset.w;
+    showWorkout(PRESETS.find(p => p.id === id) || MYW.find(w => w.id === id));
+  });
+}
+function wCard(w) {
+  const best = bestFor(w.name, w.mode);
+  return `<button class="card tap" data-w="${w.id}" style="text-align:left;display:block;width:100%">
+    <div class="row"><div style="flex:1;min-width:0">
+      <div class="ttl">${esc(w.name)}</div>
+      <div class="sub">${cfgText(presetToTM(w))}${w.items && w.items.length ? " · " + w.items.length + " movement" + (w.items.length === 1 ? "" : "s") : ""}</div>
+    </div>
+    <span class="badge ${w.eq || "acc"}">${w.eq === "kb" ? "KB" : w.eq === "bw" ? "BW" : w.eq === "mix" ? "MIX" : "MINE"}</span></div>
+    ${best ? `<div class="tiny" style="margin-top:8px;color:var(--ok)">PR ${scoreText(best.mode, best.r)}</div>` : ""}
+  </button>`;
+}
+
+function showWorkout(w) {
+  if (!w) return;
+  const t = presetToTM(w);
+  const best = bestFor(w.name, w.mode);
+  const past = HIST.filter(h => h.name === w.name).slice(0, 4);
+  openSheet(w.name, `
+    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px">
+      <span class="badge acc">${MODES.find(m => m.k === w.mode).n}</span>
+      <span class="badge">${cfgDetail(t)}</span>
+      ${w.eq ? `<span class="badge ${w.eq}">${w.eq === "kb" ? "Kettlebell" : w.eq === "bw" ? "Bodyweight" : "Mixed"}</span>` : ""}
+    </div>
+    ${w.desc ? `<div style="color:#d6dae0;font-size:15px;line-height:1.5;margin-bottom:14px">${esc(w.desc)}</div>` : ""}
+    ${t.items.length ? `<div class="tiny" style="margin-bottom:7px">MOVEMENTS</div>` + t.items.map(it => `<div class="mv"><span class="r">${esc(it.r || "·")}</span><span class="n">${esc(it.n)}</span></div>`).join("") : ""}
+    ${best ? `<div class="card" style="margin-top:12px;border-color:rgba(52,211,153,.35)"><div class="tiny">YOUR BEST</div><div style="font-size:22px;font-weight:800" class="num">${scoreText(best.mode, best.r)}</div><div class="tiny">${new Date(best.ts).toLocaleDateString()}</div></div>` : ""}
+    ${past.length ? `<div class="tiny" style="margin:14px 0 6px">RECENT</div>` + past.map(h => `<div class="row" style="justify-content:space-between;font-size:13.5px;padding:5px 0;border-bottom:1px solid var(--line)"><span style="color:var(--mut)">${new Date(h.ts).toLocaleDateString()}</span><span class="num">${scoreText(h.mode, h.r)}</span></div>`).join("") : ""}
+    <div class="hr"></div>
+    <button class="btn pri" id="wStart">START</button>
+    <div style="height:9px"></div>
+    <div class="grid2"><button class="btn" id="wLoad">Load into timer</button>${w.preset ? `<button class="btn gho" id="wCopy">Save a copy</button>` : `<button class="btn bad" id="wDel">Delete</button>`}</div>
+  `);
+  $("#wStart").onclick = () => { closeSheet(); initAudio(); startRun(t, w.name); };
+  $("#wLoad").onclick = () => { TM = t; saveTM(); renderTimer(); closeSheet(); go("timer"); };
+  const c = $("#wCopy"); if (c) c.onclick = () => { const n = JSON.parse(JSON.stringify(t)); n.id = uid(); n.preset = false; MYW.unshift(n); saveMyw(); renderTrain(); closeSheet(); toast("Saved to My Workouts"); };
+  const d = $("#wDel"); if (d) d.onclick = () => { if (!confirm("Delete this workout?")) return; MYW = MYW.filter(x => x.id !== w.id); saveMyw(); renderTrain(); closeSheet(); };
+}
+
+$("#btnBuild").onclick = () => { TM.items = []; TM.name = ""; saveTM(); renderTimer(); go("timer"); toast("Pick a format, then add movements"); };
+
+/* ==================== GENERATOR ==================== */
+let GEN = store.get("gen", { eq: "both", mins: 20, fmt: "auto", focus: "full", diff: "bal" });
+const saveGen = () => store.set("gen", GEN);
+
+$("#btnGen").onclick = () => openGen();
+
+function chipRow(id, opts, cur) {
+  return `<div class="chips">${opts.map(([k, l]) => `<button class="chip ${cur === k ? "on" : ""}" data-${id}="${k}">${l}</button>`).join("")}</div>`;
+}
+function openGen() {
+  openSheet("Random Workout", `
+    <div class="tiny">EQUIPMENT</div>${chipRow("ge", [["both", "Both"], ["bw", "Bodyweight only"], ["kb", "Kettlebell only"]], GEN.eq)}
+    <div class="tiny">TIME</div>${chipRow("gm", [[8, "8 min"], [10, "10"], [12, "12"], [15, "15"], [20, "20"], [25, "25"], [30, "30"], [40, "40"]], GEN.mins)}
+    <div class="tiny">FORMAT</div>${chipRow("gf", [["auto", "Surprise me"], ["emom", "EMOM"], ["amrap", "AMRAP"], ["fortime", "For time"], ["interval", "Intervals"]], GEN.fmt)}
+    <div class="tiny">FOCUS</div>${chipRow("go", [["full", "Full body"], ["upper", "Upper"], ["lower", "Lower"], ["core", "Core"], ["engine", "Conditioning"]], GEN.focus)}
+    <div class="tiny">DIFFICULTY</div>${chipRow("gd", [["easy", "Easier"], ["bal", "Balanced"], ["hard", "Bring it"]], GEN.diff)}
+    <div class="hr"></div>
+    <button class="btn pri" id="genGo">Generate</button>`);
+  const rebind = () => {
+    [["ge", "eq"], ["gm", "mins"], ["gf", "fmt"], ["go", "focus"], ["gd", "diff"]].forEach(([d, k]) =>
+      $$(`[data-${d}]`).forEach(b => b.onclick = () => { GEN[k] = k === "mins" ? +b.dataset[d] : b.dataset[d]; saveGen(); openGen(); }));
+    $("#genGo").onclick = () => showGenerated(generate());
+  };
+  rebind();
+}
+
+const PATTERNS = {
+  full: ["push", "pull", "legs", "core"], upper: ["push", "pull", "push", "pull"],
+  lower: ["legs", "hinge", "legs", "core"], core: ["core", "core", "core", "carry"],
+  engine: ["cardio", "legs", "cardio", "push"]
+};
+function generate() {
+  const maxLvl = GEN.diff === "easy" ? 1 : GEN.diff === "bal" ? 2 : 3;
+  const pool = EX.filter(e => (GEN.eq === "both" || e.eq === GEN.eq) && gearOk(e) && e.level <= maxLvl
+    && !["Mobility", "Skill"].includes(e.group) && !e.tags.includes("mobility"));
+  const pats = shuffle(PATTERNS[GEN.focus]);
+  const n = GEN.mins <= 10 ? 3 : GEN.mins <= 20 ? 4 : 5;
+  const chosen = [];
+  for (let i = 0; chosen.length < n && i < 40; i++) {
+    const p = pats[chosen.length % pats.length];
+    let c = pool.filter(e => e.tags.includes(p) && !chosen.some(x => x.id === e.id));
+    if (!c.length) c = pool.filter(e => !chosen.some(x => x.id === e.id));
+    if (!c.length) break;
+    chosen.push(pick(c));
+  }
+  const fmt = GEN.fmt === "auto" ? pick(["emom", "amrap", "fortime", "interval"]) : GEN.fmt;
+  const t = presetToTM({ mode: fmt, items: [] });
+  t.name = `${GEN.mins} min ${{ full: "Full Body", upper: "Upper", lower: "Lower", core: "Core", engine: "Conditioning" }[GEN.focus]}`;
+  t.eq = GEN.eq === "both" ? "mix" : GEN.eq;
+
+  if (fmt === "emom") {
+    t.interval = 60; t.rounds = GEN.mins; t.alt = true;
+    t.items = chosen.map(e => ({ n: e.name, r: defReps(e, 1.1) }));
+  } else if (fmt === "amrap") {
+    t.amrapSec = GEN.mins * 60;
+    t.items = chosen.map(e => ({ n: e.name, r: defReps(e, .7) }));
+  } else if (fmt === "fortime") {
+    const rds = GEN.mins <= 12 ? 3 : GEN.mins <= 20 ? 5 : 7;
+    t.capSec = GEN.mins * 60;
+    t.items = chosen.map(e => ({ n: e.name, r: defReps(e, .8) }));
+    t.rds = rds;
+    t.name = `${rds} Rounds · ` + t.name;
+  } else {
+    t.work = GEN.diff === "hard" ? 45 : 40; t.rest = GEN.diff === "easy" ? 30 : 20;
+    t.ivRounds = chosen.length;
+    t.sets = Math.max(1, Math.round(GEN.mins * 60 / ((t.work + t.rest) * chosen.length)));
+    t.setRest = 0;
+    t.items = chosen.map(e => ({ n: e.name, r: "max reps" }));
+  }
+  const warm = shuffle(EX.filter(e => e.group === "Mobility" && gearOk(e))).slice(0, 3);
+  t.warm = warm.map(e => e.name);
+  return t;
+}
+function showGenerated(t) {
+  openSheet(t.name, `
+    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px">
+      <span class="badge acc">${MODES.find(m => m.k === t.mode).n}</span><span class="badge">${cfgDetail(t)}</span>
+    </div>
+    <div class="tiny" style="margin-bottom:7px">WARM UP · 5 MIN</div>
+    ${t.warm.map(w => `<div class="mv"><span class="n">${esc(w)}</span></div>`).join("")}
+    <div class="tiny" style="margin:14px 0 7px">${t.mode === "fortime" ? `${t.rds} ROUNDS OF` : t.mode === "emom" ? "ONE PER MINUTE" : "MOVEMENTS"}</div>
+    ${t.items.map(it => `<div class="mv"><span class="r">${esc(it.r)}</span><span class="n">${esc(it.n)}</span></div>`).join("")}
+    <div class="hr"></div>
+    <button class="btn pri" id="gStart">START</button>
+    <div style="height:9px"></div>
+    <div class="grid2"><button class="btn" id="gAgain">🎲 Again</button><button class="btn" id="gSave">Save</button></div>`);
+  $("#gStart").onclick = () => { closeSheet(); initAudio(); startRun(t, t.name); };
+  $("#gAgain").onclick = () => showGenerated(generate());
+  $("#gSave").onclick = () => { const c = JSON.parse(JSON.stringify(t)); c.id = uid(); MYW.unshift(c); saveMyw(); renderTrain(); closeSheet(); toast("Saved to My Workouts"); };
+}
+
+/* ==================== LOG ==================== */
+function renderLog() {
+  const now = Date.now(), wk = HIST.filter(h => now - h.ts < 6048e5).length;
+  const days = new Set(HIST.map(h => new Date(h.ts).toDateString()));
+  let streak = 0; const d = new Date();
+  for (; ;) { if (days.has(d.toDateString())) { streak++; d.setDate(d.getDate() - 1); } else if (streak === 0 && days.has(new Date(d.getTime() - 864e5).toDateString())) { d.setDate(d.getDate() - 1); } else break; }
+  const mins = Math.round(HIST.reduce((a, h) => a + (h.r.timeSec || 0), 0) / 60);
+  $("#logStats").innerHTML = [[HIST.length, "Total"], [wk, "7 days"], [streak, "Streak"], [mins, "Minutes"]]
+    .map(([v, k]) => `<div class="stat"><div class="v num">${v}</div><div class="k">${k}</div></div>`).join("");
+
+  const groups = {};
+  HIST.forEach(h => { const k = h.name + "||" + h.mode; (groups[k] = groups[k] || []).push(h); });
+  const prs = Object.keys(groups).map(k => { const [n, m] = k.split("||"); return { n, m, b: bestFor(n, m), c: groups[k].length }; }).filter(x => x.b);
+  prs.sort((a, b) => b.c - a.c);
+  $("#prList").innerHTML = prs.length ? prs.map(p => `<div class="card" style="padding:12px"><div class="row">
+      <div style="flex:1;min-width:0"><div class="ttl" style="font-size:14.5px">${esc(p.n)}</div><div class="tiny">${MODES.find(m => m.k === p.m).n} · ${p.c} session${p.c === 1 ? "" : "s"}</div></div>
+      <div style="text-align:right"><div class="num" style="font-weight:800;font-size:18px;color:var(--ok)">${scoreText(p.m, p.b.r)}</div><div class="tiny">${new Date(p.b.ts).toLocaleDateString()}</div></div></div></div>`).join("")
+    : `<div class="tiny" style="padding:2px">Finish a workout and your records show up here.</div>`;
+
+  $("#histList").innerHTML = HIST.length ? HIST.slice(0, 200).map(h => `<button class="card tap" data-h="${h.id}" style="text-align:left;display:block;width:100%">
+      <div class="row"><div style="flex:1;min-width:0">
+        <div class="ttl" style="font-size:14.5px">${esc(h.name)}</div>
+        <div class="tiny">${new Date(h.ts).toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric" })} · ${esc(h.cfgText || "")}</div>
+      </div><div class="num" style="font-weight:800;font-size:17px">${scoreText(h.mode, h.r)}</div></div>
+      ${h.notes ? `<div class="tiny" style="margin-top:6px;color:var(--mut)">${esc(h.notes)}</div>` : ""}</button>`).join("")
+    : `<div class="empty"><div class="big">🏋️</div>No workouts logged yet.<br><span class="tiny">Your history lives on this phone only.</span></div>`;
+  $$("[data-h]").forEach(b => b.onclick = () => showHist(b.dataset.h));
+}
+function showHist(id) {
+  const h = HIST.find(x => x.id === id); if (!h) return;
+  openSheet(h.name, `
+    <div class="card" style="text-align:center"><div class="num" style="font-size:32px;font-weight:800">${scoreText(h.mode, h.r)}</div>
+    <div class="tiny">${esc(h.cfgText || "")} · ${new Date(h.ts).toLocaleString()}</div></div>
+    ${h.items && h.items.length ? h.items.map(it => `<div class="mv"><span class="r">${esc(it.r || "·")}</span><span class="n">${esc(it.n)}</span></div>`).join("") : ""}
+    ${h.splits && h.splits.length ? `<div class="tiny" style="margin:12px 0 6px">SPLITS</div>` + h.splits.map((s, i) => `<div class="row" style="justify-content:space-between;padding:4px 0;font-size:13.5px"><span style="color:var(--mut)">Round ${i + 1}</span><span class="num">${fmtLong(s)}</span></div>`).join("") : ""}
+    ${h.notes ? `<div class="hr"></div><div style="color:#d6dae0">${esc(h.notes)}</div>` : ""}
+    <div class="hr"></div>
+    <div class="grid2"><button class="btn" id="hRedo">Do it again</button><button class="btn bad" id="hDel">Delete</button></div>`);
+  $("#hRedo").onclick = () => {
+    const p = PRESETS.find(p => p.name === h.name) || MYW.find(w => w.name === h.name);
+    closeSheet();
+    if (p) { initAudio(); startRun(presetToTM(p), h.name); }
+    else { TM.mode = h.mode; TM.items = h.items || []; TM.name = h.name; saveTM(); renderTimer(); go("timer"); }
+  };
+  $("#hDel").onclick = () => { if (!confirm("Delete this entry?")) return; HIST = HIST.filter(x => x.id !== id); saveHist(); closeSheet(); renderLog(); };
+}
+
+/* ==================== SETTINGS ==================== */
+$("#btnSettings").onclick = () => {
+  openSheet("Settings", `
+    <div class="card" style="padding:2px 14px">
+      ${[["sound", "Sound cues", "Beeps for countdowns and round changes"],
+      ["voice", "Voice callouts", "Speaks the movement or round number"],
+      ["flash", "Screen flash", "Flashes the screen at each round — works with the phone on silent"],
+      ["wake", "Keep screen awake", "Stops the phone locking mid-workout"]]
+      .map(([k, t, d]) => `<div class="sw"><div style="padding-right:12px"><div style="font-weight:650;font-size:14.5px">${t}</div><div class="tiny">${d}</div></div><div class="tog ${S[k] ? "on" : ""}" data-tg="${k}"></div></div>`).join("")}
+    </div>
+    <label class="fld"><span>Countdown before start</span>
+      <select id="stPrep">${[0, 3, 5, 10, 15].map(v => `<option value="${v}" ${S.prep === v ? "selected" : ""}>${v ? v + " seconds" : "None"}</option>`).join("")}</select></label>
+    <label class="fld"><span>Your kettlebell (optional)</span><input type="text" id="stKb" value="${esc(S.kbw)}" placeholder="e.g. 24kg"></label>
+    <div class="tiny" style="margin-bottom:7px">EQUIPMENT YOU HAVE</div>
+    <div class="card" style="padding:2px 14px">
+      ${Object.entries(GEAR_LABEL).map(([k, l]) => `<div class="sw"><div style="font-weight:650;font-size:14.5px">${l}</div><div class="tog ${S.gear[k] ? "on" : ""}" data-gr="${k}"></div></div>`).join("")}
+    </div>
+    <div class="tiny" style="margin:10px 2px">Movements needing gear you don't have are skipped by the random generator.</div>
+    <div class="hr"></div>
+    <div class="grid2"><button class="btn sm" id="stExport">Copy my data</button><button class="btn sm" id="stImport">Paste data in</button></div>
+    <div style="height:9px"></div>
+    <button class="btn sm bad gho" id="stReset">Erase everything</button>
+    <div class="tiny" style="margin-top:14px;text-align:center;line-height:1.6">IronMinute · 236 movements<br>Everything is stored on this device only.<br>Add to your Home Screen for full-screen mode.</div>
+  `);
+  $$("[data-tg]").forEach(b => b.onclick = () => { S[b.dataset.tg] = !S[b.dataset.tg]; saveS(); b.classList.toggle("on", S[b.dataset.tg]); if (b.dataset.tg === "sound") updateSoundIcon(); });
+  $$("[data-gr]").forEach(b => b.onclick = () => { S.gear[b.dataset.gr] = !S.gear[b.dataset.gr]; saveS(); b.classList.toggle("on", S.gear[b.dataset.gr]); renderLib(); });
+  $("#stPrep").onchange = e => { S.prep = +e.target.value; saveS(); };
+  $("#stKb").onchange = e => { S.kbw = e.target.value.trim(); saveS(); };
+  $("#stExport").onclick = async () => {
+    const d = JSON.stringify({ v: 1, hist: HIST, myw: MYW, settings: S });
+    try { await navigator.clipboard.writeText(d); toast("Copied — paste it somewhere safe"); }
+    catch (e) { openSheet("Your data", `<textarea rows="12" style="font-size:12px">${esc(d)}</textarea><div class="tiny" style="margin-top:8px">Select all and copy.</div>`); }
+  };
+  $("#stImport").onclick = () => {
+    openSheet("Paste your data", `<textarea id="imD" rows="8" placeholder="Paste the exported text here"></textarea><div style="height:10px"></div><button class="btn pri" id="imOk">Restore</button>`);
+    $("#imOk").onclick = () => {
+      try {
+        const d = JSON.parse($("#imD").value);
+        if (d.hist) { HIST = d.hist; saveHist(); }
+        if (d.myw) { MYW = d.myw; saveMyw(); }
+        if (d.settings) { S = Object.assign(S, d.settings); saveS(); }
+        renderAll(); closeSheet(); toast("Restored");
+      } catch (e) { toast("That didn't look like valid data"); }
+    };
+  };
+  $("#stReset").onclick = () => {
+    if (!confirm("Erase all history, saved workouts and settings? This can't be undone.")) return;
+    HIST = []; MYW = []; S = JSON.parse(JSON.stringify(DEF_SETTINGS));
+    saveHist(); saveMyw(); saveS(); renderAll(); closeSheet(); toast("Erased");
+  };
+};
+
+/* ==================== INIT ==================== */
+function renderAll() { renderTrain(); renderLib(); renderTimer(); renderLog(); }
+renderAll();
+$("#libSearch").placeholder = "Search " + EX.length + " movements…";
+
+
+</script>
+</body>
+</html>
